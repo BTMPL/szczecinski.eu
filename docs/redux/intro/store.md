@@ -2,7 +2,7 @@
 title: Store
 ---
 
-Store jest kluczowym elementem Reduxa, jednym z niewielu, jakie tworzy API Reduxa. To w store przechowywane są dane, to "do" store emitowane są akcje i to store obsługuje bardziej złożone mechanizmy jak middleware i enchancery.
+Store jest kluczowym elementem Reduxa, jednym z niewielu, jakie tworzy API Reduxa. To w store przechowywane są dane, to "do" store emitowane są akcje i to store obsługuje bardziej złożone mechanizmy jak middleware i enhancery.
 
 Store tworzone jest poprzez wywołanie funkcji `createStore` i przekazanie do niej naszego reducera:
 

@@ -9,7 +9,7 @@ Redux nakłada na nas dwa ograniczenia:
 - nie powinniśmy mutować otrzymanego stanu
 - reducer nie może zwrócić wartości `undefined` (ale może `false`, `null` etc.)
 
-Dobrym zwyczajem jest zadeklarowanie domyślnego (początkowego) stanu i przekazanie go do argumentów za pomocą notacji domyślnej.
+Dobrym zwyczajem jest zadeklarowanie domyślnego (początkowego) stanu i przekazanie go do argumentu jako wartość domyślna.
 
 ```js
 const initialState = 0;
@@ -97,7 +97,7 @@ Analogiczna sytuacja ma miejsce w przypadku kiedy chcemy podmienić (zaktualizow
 
 ## Obawy o wydajność
 
-Przeczytawszy powyższy paragraf możemy zacząć obawiać się o wydajność naszych aplikacji - w końcu po każdej akcji, którą obsługuje reducer, tworzona jest nowa kopia obiektu, co powoduje zajęcie zasobów użytkownika etc. Sytuacja tak może wydać się jeszcze bardziej groźna w wypadku, kiedy zmieniamy jeden element w tablicy zawierających setki obiektu. Wyobraźmy sobie sytuację, gdzie w kolekcji 100 postów chcemy zmienić właściwości `isRead` jednego z nich:
+Przeczytawszy powyższy paragraf możemy zacząć obawiać się o wydajność naszych aplikacji - w końcu po każdej akcji, którą obsługuje reducer, tworzona jest nowa kopia obiektu, co powoduje zajęcie zasobów użytkownika etc. Sytuacja ta może wydać się jeszcze bardziej groźna w wypadku, kiedy zmieniamy jeden element w tablicy zawierających setki obiektów. Wyobraźmy sobie sytuację, gdzie w kolekcji 100 postów chcemy zmienić właściwości `isRead` jednego z nich:
 
 ```js
 return state.map((post, idOfPost) => {
@@ -114,7 +114,7 @@ Przy 100 postach może wydawać się, że zmieniając dane tylko w jednym stworz
 
 ## Notacja mapy typów akcji
 
-Jak można się domyśleć, wraz ze wzrostem ilości akcji, które nasz reducer "umie" obsłużyć, zapis `switch` staje się co raz mniej czytelny. Popularną formą zastąpującą te notacją jest mapa akcji:
+Jak można się domyśleć, wraz ze wzrostem ilości akcji, które nasz reducer "umie" obsłużyć, zapis `switch` staje się co raz mniej czytelny. Popularną formą zastępującą te notację jest mapa akcji:
 
 ```js
 const incrementActionHandler = (state, action) => state + action.by;

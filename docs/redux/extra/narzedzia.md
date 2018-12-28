@@ -6,7 +6,7 @@ title: Narzędzia
 
 Najpopularniejszym i najprzydatniejszym narzędziem jakie powinniśmy dodać do naszego projektu jest niewątpliwie [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) składające się z 2 części: enhancera oraz UI (występującego albo w postaci dodatku do naszego projektu, albo jako rozszerzenie do przeglądarki - zdecydowanie polecam to drugie).
 
-Enchancery to mechanizm pozwalający na dodanie nowych możliwości do samego store - jest to potężniejsza wersja middleware.
+Enhancery to mechanizm pozwalający na dodanie nowych możliwości do samego store - jest to potężniejsza wersja middleware.
 
 Narzędzie to pozwala nam na:
 
