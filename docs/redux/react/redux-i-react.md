@@ -8,14 +8,16 @@ Podstawowa wersja implementacji Redux w React jest stosunkowo prosta - każdy ko
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
 const reducer = (state = 0, action) => {
   if (action.type === 'CLICK') return state + 1;
   return state;
 }
 
-const store = createStore(reducer);
+const store = createStore(combineReducers({
+  counter: reducer
+}));
 
 class App extends React.Component {
 
@@ -24,7 +26,7 @@ class App extends React.Component {
   handleClick = () => {
     store.dispatch({ type: 'CLICK' });
     this.setState({
-      count: store.getState()
+      count: store.getState().counter
     })
   }
 
@@ -37,6 +39,7 @@ class App extends React.Component {
   }
 }
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/1vz28vk2n4)
 
 Przepływ danych w powyższej aplikacji jest następujący:
 
@@ -55,7 +58,7 @@ W celu rozpoczęcia poprawnej pracy z Reduxem, komponent musi zasubskrybować in
   componentDidMount() {
     this.listener = store.subscribe(() => {
       this.setState({
-        count: store.getState()
+        count: store.getState().counter
       });
     });
   }
@@ -70,6 +73,7 @@ W celu rozpoczęcia poprawnej pracy z Reduxem, komponent musi zasubskrybować in
     store.dispatch({ type: 'CLICK' });
   }
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/305zq4jxpm)
 
 Przepływ danych został teraz nieco zmieniony:
 

@@ -61,5 +61,6 @@ const actionInspectorMiddleware = (store) => {
   }
 }
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/5w5pmn03j4)
 
 Przy każdej wywołanej akcji zobaczymy w konsoli jej szczegóły, a kiedy spowoduje ona zmianę stanu Redux, zostaniemy o tym poinformowani (oczywiście użyte tutaj porównanie okaże się nie skuteczne, jeżeli stan jest złożonym typem danych, np. efektem `combineReducers`).

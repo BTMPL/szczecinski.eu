@@ -44,6 +44,12 @@
   .imageAlignTop.alignCenter .blockImage img {
     max-height: 100%;
   }
+
+  pre + p a[href*="codesandbox"] {
+    font-size: 0.9rem;
+    position: relative;
+    top: -1rem;
+  }
 }
 
 @media only screen and (max-width: 1023px) {

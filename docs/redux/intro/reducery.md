@@ -44,7 +44,7 @@ Jako że reducer jest zwykłą funkcją, możemy przetestować go bez inicjacji 
 const newState = reducer(undefined, {
   type: INCREMENT_COUNTER,
   by: 10
-}));
+});
 console.log(newState); // "10";
 
 const newState2 = reducer(newState, {
@@ -62,6 +62,7 @@ const newState3 = reducer(newState2, {
 console.log(newState3); // "15"
 console.log(newState2 === newState3); // "true"
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/lrm16p0mm)
 
 Przypomnijmy sobie założenia reducerów:
 

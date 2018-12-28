@@ -31,12 +31,17 @@ const mapStateToProps = (state) => {
 
 const App = (props) => (
   <div>
-    <button onClick={() => {}}>Kliknięto {props.counter} razy</button>
+    <button onClick={() => {
+      dispatch({
+        type: 'CLICK'
+      })
+    }}>Kliknięto {props.counter} razy</button>
   </div>
 );
 
 const ConnectedApp = connect(mapStateToProps)(App);
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/xro313jv0w)
 
 W ten sposób nasz komponent otrzymuje tylko i wyłącznie informacje zapisane w `store.getState().counter`. Żadne inne informacje go nie interesują i ich zmiana nie spowoduje re-renderowania się komponentu. W celu stworzenia poprawnej architektury komponentu powinniśmy zadbać o to, by `mapStateToProps` tak poinstruowało `connect` by do komponentu trafił tylko te informacje, które go interesują.
 

@@ -49,6 +49,7 @@ store.dispatch({ type: 'TOCK' }); // "{counter: 2, hello: 0}"
 
 store.dispatch({ type: 'HELLO' }); // "{counter: 2, hello: 1}"
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/6vzk6z2xpr)
 
 Jak widać, dane które zwracane są przez `getState` odzwierciedlają strukturę, którą zdefiniowaliśmy dla naszego `rootReducer`. Oba reducery zostały wywołane dla każdej z akcji, ale każdy otrzymał tylko swój "kawałek" ogólnego store (jeżeli nie jesteś tego pewnym, umieść `console.log(state)` w każdym z reducerów).
 
@@ -76,6 +77,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer);
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/my7jk5j4m8)
 
 Również w ten sposób należy pamiętać o tym, że docelowe dane reducera nie są już dostępne bezpośrednio po wywołaniu `store.getState()` ale są "zagnieżdżone" w kluczu odpowiadającym kluczowi z wywołania `combineReducers` (NIE nazwie reducera!).
 

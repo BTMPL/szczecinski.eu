@@ -43,3 +43,4 @@ store.dispatch({type: 'TICK'});
  * ale nie ma żadnego aktywnego listenera, który zareagował by na te zmianę.
  */
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/nrjz44z57p)

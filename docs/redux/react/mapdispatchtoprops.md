@@ -35,6 +35,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
 ```
+[Uruchom w codesandbox](https://codesandbox.io/s/z6znp43m9l)
 
 Dzięki temu zabiegowi nasz "nie połączony" komponent `App` gotowy jest do wykorzystania w innej części aplikacji, lub innej aplikacji, być może bez Reduxa.
 
