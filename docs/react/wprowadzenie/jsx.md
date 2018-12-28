@@ -7,7 +7,7 @@ Nasza aplikacja działa, ale jest strasznie prosta - renderuje tylko zwykły str
 React używa własnego języka znaczników - JSX, który stanowi rozszerzenie języka JS przy pomocy składni przypominającej XML. Nie jest to jednak ani XML, ani HTML, a co więcej znaczniki te nie są w żaden sposób interpretowane przez przeglądarkę - stanowią one jedynie ułatwienie dla developerów przy pracy z React. Jeżeli nie podoba nam się "umieszczanie HTML w JS" istnieje wiele alternatyw jak react-hyperscript czy też pisanie własnoręcznie wygenerowanego kodu.
 
 > ### Uwaga
-> Znaczniki JSX nie są interpretowane przez przeglądarkę i będą prowadzić do powstawania błędów. Od teraz wszystkie przykłady uruchamiaj w środowisku CRA lub innym boilerplate. Kod z tej sekcji umieść w pliku `src/index.js` i uruchom projekt poleceniem `npm start`. Jeżeli nie skonfigurowałeś jeszcze CRA zajrzyj do sekcji [Lekcja 1](/lekcja/lekcja1/create-react-app).
+> Znaczniki JSX nie są interpretowane przez przeglądarkę i będą prowadzić do powstawania błędów. Od teraz wszystkie przykłady uruchamiaj w środowisku CRA lub innym boilerplate. Kod z tej sekcji umieść w pliku `src/index.js` i uruchom projekt poleceniem `npm start`. Jeżeli nie skonfigurowałeś jeszcze CRA zajrzyj do sekcji [Lekcja 1](/lekcja/podstawowe-pojecia/create-react-app).
 
 Uaktualnijmy zatem naszą aplikację tak, by wyglądała jak typowy Tweet. Dodamy trochę znaczników HTML oraz nieco więcej tekstu.
 

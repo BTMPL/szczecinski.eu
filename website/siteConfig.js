@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Szczecinski.eu', // Title for your website.
+  title: 'szczecinski.eu', // Title for your website.
   tagline: 'Darmowe kursy ES6, React, Redux',
   url: 'https://szczecinski.eu', // Your website URL
   baseUrl: '/', // Base URL for your project */
@@ -38,9 +38,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'es6/01-const', label: 'Kurs ES6'},
-    {doc: 'react/lekcja1/01-basic', label: 'Kurs React'},
+    {doc: 'react/podstawowe-pojecia/basic', label: 'Kurs React'},
     {doc: 'redux/intro/czym-jest-redux', label: 'Kurs Redux'},
+    {doc: 'es6/const', label: 'Kurs ES6'},
     {
       href: 'https://medium.com/@baphemot',
       target: '_blank',
@@ -58,7 +58,7 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: '/avatars0.githubusercontent.com/u/247153?v=4',
   footerIcon: 'img/docusaurus.svg',
-  favicon: 'img/favicon.png',
+  favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {

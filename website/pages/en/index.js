@@ -62,11 +62,6 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
-            <Button href={docUrl('es6/01-const')}>Kurs ES6</Button>
-            <Button href={docUrl('react/lekcja1/01-basic')}>Kurs React</Button>
-            <Button href={docUrl('redux/intro/czym-jest-redux')}>Kurs Redux</Button>
-          </PromoSection>
         </div>
       </SplashContainer>
     );
@@ -91,17 +86,64 @@ class Index extends React.Component {
       </Container>
     );
 
+    const Intro = () => {
+      return (
+        <Container>
+          <GridBlock
+            align="center"
+            layout="threeColumn"
+            contents={[
+              {
+                content: `Kompletne wprowadzenie do tworzenia aplikacji przy użyciu React. Od pierwsych kroków
+                  po deploy na serwerze.`,
+                image: `${siteConfig.baseUrl}img/react.svg`,
+                imageAlign: 'top',
+                imageAlt: 'React',
+                title: '[Kurs React](/docs/react/podstawowe-pojecia/basic)',
+              },
+              {
+                content: `Najpopularniejszy w świecie React manager stanu - dowiedz się jak z niego korzystać,
+                  rozszerzać i testować.`,
+                image: `${siteConfig.baseUrl}img/redux.svg`,
+                imageAlign: 'top',
+                imageAlt: 'Redux',
+                title: '[Kurs Redux](/docs/redux/intro/czym-jest-redux)',
+              },
+              {
+                content: `Szybki kurs ES6 zapozna Cię z technikami i narzędziami dodanymi do JavaScript w ES6/ES2015
+                  które napotkasz przy pracy z nowymi bibliotekami.`,
+                image: `${siteConfig.baseUrl}img/es6.svg`,
+                imageAlign: 'top',
+                imageAlt: 'Redux',
+                title: '[Szybki kurs ES6](/docs/es6/const)',
+              }
+            ]} 
+          /> 
+        </Container>
+      );
+    }
+
     const Why = props => (
       <Container padding={['bottom']}>
-        <h2>Dlaczego warto zainwestować w naukę React?</h2>
-        <p>Zarówno ilość developerów, jak i ofert pracy dla developerów React rośnie praktycznie nieprzerwanie od 2013 roku 1. Pojawiają się kolejne dziedziny w, w których React ma zastosowanie - React Native (Android, iOS, Windows Mobile), React Native for Windows, ReactVR czy Xbox (przy użyciu Universal Windows Platform).</p>      
-        <p>Stosunkowo niski "próg wejścia", całkowita kompatybilność wsteczna oraz duża i aktywna społeczność developerów, kontrybutorów i autorów niezależnych bibliotek sprawia, że React nie jest technologią, obok której można przejść obojętnie. Brak unikalnego języka domenowego (ang. domain specific language) sprawia, że wiedza nabyta podczas nauki React przyda się również w innych projektach - oznacza to, że inwestując czas w naukę React nie zmniejszamy szansy na zmianę technologii w której pracujemy w przyszłości.</p>      
-        <p>React będzie doskonałym wyborem, wszędzie tam, gdzie celem jest wytworzenie rozbudowanego interfejsu użytkownika, reagującego w czasie rzeczywistym na interakcję zarówno użytkownika jak i serwera.</p>
-        
-        <h2>Dlaczego właśnie ten kurs?</h2>
-        <p>Swoją przygodę z React rozpocząłem w 2015 roku - od tego czasu ukończyłem już kilka komercyjnych produktów, z których korzystają setki tysięcy użytkowników.</p>      
-        <p>Duża część mojej pracy polega na wprowadzaniu nowych developerów do istniejących już zespołów, dbanie o przekazywanie i utrwalanie wiedzy oraz egzekwowanie dobrych praktyk. Jako moderator społeczności Reactiflux, meet.js łódź oraz NodeSchool Łódź codziennie mam styczność z osobami o różnym stopniu wiedzy (zarówno z zakresu React jak i samego JavaScript) więc doskonale wiem, jakie błędy popełniane są najczęściej i na co należy zwrócić uwagę.</p>      
-        <p>Kurs przygotowany jest z myślą o osobach, które nie czują się jeszcze całkowicie pewnie w standardzie ES6 - wszelkie nowe pojęcia są dokładnie opisane i wytłumaczone zanim zaczniesz znajdywać je w kolejnych przykładach. Kurs jest także aktualizowany na bieżąco dzięki czemu masz pewność, że kod, który poznasz będzie bez problemu działał z aktualną wersją React i innych bibliotek.</p>
+
+        <h2>O mnie</h2>
+        <p>
+          Swoją przygodę z React rozpocząłem w 2015 roku - od tego czasu ukończyłem już kilka komercyjnych produktów,
+          z których korzystają setki tysięcy użytkowników.
+        </p>      
+        <p>
+          Duża część mojej pracy polega na wprowadzaniu nowych developerów do istniejących już zespołów, dbanie o 
+          przekazywanie i utrwalanie wiedzy oraz egzekwowanie dobrych praktyk. Jako moderator społeczności Reactiflux, 
+          meet.js Łódź oraz NodeSchool Łódź codziennie mam styczność z osobami o różnym stopniu wiedzy (zarówno 
+          z zakresu React jak i samego JavaScript) więc doskonale wiem, jakie błędy popełniane są najczęściej i na co 
+          należy zwrócić uwagę.
+        </p>      
+        <p>
+          Kursy przygotowane są z myślą o osobach, które nie czują się jeszcze całkowicie pewnie w standardzie 
+          ES6 - wszelkie nowe pojęcia są dokładnie opisane i wytłumaczone zanim zaczniesz znajdywać je w kolejnych 
+          przykładach. Kurs jest także aktualizowany na bieżąco dzięki czemu masz pewność, że kod, który poznasz 
+          będzie bez problemu działał z aktualną wersją React i innych bibliotek.
+        </p>
       </Container>
     )
 
@@ -109,6 +151,8 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer" style={{maxWidth: 940, margin: '0 auto'}}>
+          <Intro />
+
           <Why />
         </div>
       </div>

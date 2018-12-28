@@ -1,33 +1,33 @@
 {
   "react": {
     "Podstawowe pojęcia, konfiguracja środowiska": [
-      "react/lekcja1/01-basic",
-      "react/lekcja1/02-nodejs",
-      "react/lekcja1/03-tools",
-      "react/lekcja1/04-create-react-app"
+      "react/podstawowe-pojecia/basic",
+      "react/podstawowe-pojecia/nodejs",
+      "react/podstawowe-pojecia/tools",
+      "react/podstawowe-pojecia/create-react-app"
     ],
     "Wprowdzenie do React": [
-      "react/lekcja2/01-react-dom",
-      "react/lekcja2/02-jsx",
-      "react/lekcja2/03-komponenty",
-      "react/lekcja2/04-kompozycja"
+      "react/wprowadzenie/react-dom",
+      "react/wprowadzenie/jsx",
+      "react/wprowadzenie/komponenty",
+      "react/wprowadzenie/kompozycja"
     ],
     "Interakcja z komponentami": [
-      "react/lekcja3/01-pass-props",
-      "react/lekcja3/02-proptypes",
-      "react/lekcja3/03-list-of-components",
-      "react/lekcja3/04-no-parent-render",
-      "react/lekcja3/05-uncontrolled-forms",
-      "react/lekcja3/06-events",
-      "react/lekcja3/07-state",
-      "react/lekcja3/08-lifecycle",
-      "react/lekcja3/09-lift-state"
+      "react/komponenty/pass-props",
+      "react/komponenty/proptypes",
+      "react/komponenty/list-of-components",
+      "react/komponenty/no-parent-render",
+      "react/komponenty/uncontrolled-forms",
+      "react/komponenty/events",
+      "react/komponenty/state",
+      "react/komponenty/lifecycle",
+      "react/komponenty/lift-state"
     ],
     "Receptury": [
-      "react/lekcja4/01-css",
-      "react/lekcja4/02-css-in-js",
-      "react/lekcja4/03-ajax",
-      "react/lekcja4/04-production"
+      "react/receptury/css",
+      "react/receptury/css-in-js",
+      "react/receptury/ajax",
+      "react/receptury/production"
     ]
   },
   "redux": {
@@ -73,15 +73,15 @@
   },
   "es6": {
     "Szybki kurs ES6": [
-      "es6/01-const",
-      "es6/02-templates",
-      "es6/03-arrow-functions",
-      "es6/04-default",
-      "es6/05-object",
-      "es6/06-class",
-      "es6/07-esm",
-      "es6/08-promise",
-      "es6/09-decorators"
+      "es6/const",
+      "es6/templates",
+      "es6/arrow-functions",
+      "es6/default",
+      "es6/object",
+      "es6/class",
+      "es6/esm",
+      "es6/promise",
+      "es6/decorators"
     ]
   }  
 }
