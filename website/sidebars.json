@@ -1,0 +1,87 @@
+{
+  "react": {
+    "Podstawowe pojęcia, konfiguracja środowiska": [
+      "react/lekcja1/01-basic",
+      "react/lekcja1/02-nodejs",
+      "react/lekcja1/03-tools",
+      "react/lekcja1/04-create-react-app"
+    ],
+    "Wprowdzenie do React": [
+      "react/lekcja2/01-react-dom",
+      "react/lekcja2/02-jsx",
+      "react/lekcja2/03-komponenty",
+      "react/lekcja2/04-kompozycja"
+    ],
+    "Interakcja z komponentami": [
+      "react/lekcja3/01-pass-props",
+      "react/lekcja3/02-proptypes",
+      "react/lekcja3/03-list-of-components",
+      "react/lekcja3/04-no-parent-render",
+      "react/lekcja3/05-uncontrolled-forms",
+      "react/lekcja3/06-events",
+      "react/lekcja3/07-state",
+      "react/lekcja3/08-lifecycle",
+      "react/lekcja3/09-lift-state"
+    ],
+    "Receptury": [
+      "react/lekcja4/01-css",
+      "react/lekcja4/02-css-in-js",
+      "react/lekcja4/03-ajax",
+      "react/lekcja4/04-production"
+    ]
+  },
+  "redux": {
+    "Intro": [
+      "redux/intro/czym-jest-redux",
+      "redux/intro/instalacja",
+      "redux/intro/akcje",
+      "redux/intro/reducery",
+      "redux/intro/store",
+      "redux/intro/przykladowa-aplikacja",
+      "redux/intro/wiele-reducerow"
+    ],
+    "Użycie z React": [
+      "redux/react/redux-i-react",
+      "redux/react/react-redux",
+      "redux/react/instalacja",
+      "redux/react/provider",
+      "redux/react/connect",
+      {
+        "type": "subcategory",
+        "label": "Argumenty connect",  
+        "ids": [
+          "redux/react/mapstatetoprops",
+          "redux/react/mapdispatchtoprops"
+        ]
+      }
+    ],
+    "Dodatkowe informacje": [
+      "redux/extra/selektory",
+      "redux/extra/middleware",
+      {
+        "type": "subcategory",
+        "label": "Przykładowe middleware",  
+        "ids": [
+          "redux/extra/redux-thunk",
+          "redux/extra/redux-immutable-state-invariant"
+        ]
+      },
+      "redux/extra/niemutowalne-aktualizowanie-stanu",  
+      "redux/extra/testowanie-reduxa",
+      "redux/extra/narzedzia"
+    ]
+  },
+  "es6": {
+    "Szybki kurs ES6": [
+      "es6/01-const",
+      "es6/02-templates",
+      "es6/03-arrow-functions",
+      "es6/04-default",
+      "es6/05-object",
+      "es6/06-class",
+      "es6/07-esm",
+      "es6/08-promise",
+      "es6/09-decorators"
+    ]
+  }  
+}
