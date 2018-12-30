@@ -41,7 +41,8 @@ const App = (props) => (
 
 const ConnectedApp = connect(mapStateToProps)(App);
 ```
-[Uruchom w codesandbox](https://codesandbox.io/s/xro313jv0w)
+
+<iframe src="https://codesandbox.io/embed/xro313jv0w" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 W ten sposób nasz komponent otrzymuje tylko i wyłącznie informacje zapisane w `store.getState().counter`. Żadne inne informacje go nie interesują i ich zmiana nie spowoduje re-renderowania się komponentu. W celu stworzenia poprawnej architektury komponentu powinniśmy zadbać o to, by `mapStateToProps` tak poinstruowało `connect` by do komponentu trafił tylko te informacje, które go interesują.
 

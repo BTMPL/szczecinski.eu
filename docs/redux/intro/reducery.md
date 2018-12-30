@@ -62,7 +62,8 @@ const newState3 = reducer(newState2, {
 console.log(newState3); // "15"
 console.log(newState2 === newState3); // "true"
 ```
-[Uruchom w codesandbox](https://codesandbox.io/s/lrm16p0mm)
+
+<iframe src="https://codesandbox.io/embed/lrm16p0mm" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Przypomnijmy sobie założenia reducerów:
 

@@ -148,4 +148,5 @@ const memoizedInProgress = createSelector(
 console.log(memoizedInProgress(state)); // "Brak danych w pamięci - przelicz", "[Object, Object]"
 console.log(memoizedInProgress(state)); // "[Object, Object]"
 ```
-[Uruchom w codesandbox](https://codesandbox.io/s/m57zxo341x)
+
+<iframe src="https://codesandbox.io/embed/m57zxo341x" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>

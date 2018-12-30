@@ -39,7 +39,8 @@ class App extends React.Component {
   }
 }
 ```
-[Uruchom w codesandbox](https://codesandbox.io/s/1vz28vk2n4)
+
+<iframe src="https://codesandbox.io/embed/1vz28vk2n4" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Przepływ danych w powyższej aplikacji jest następujący:
 
@@ -73,7 +74,8 @@ W celu rozpoczęcia poprawnej pracy z Reduxem, komponent musi zasubskrybować in
     store.dispatch({ type: 'CLICK' });
   }
 ```
-[Uruchom w codesandbox](https://codesandbox.io/s/305zq4jxpm)
+
+<iframe src="https://codesandbox.io/embed/305zq4jxpm" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Przepływ danych został teraz nieco zmieniony:
 

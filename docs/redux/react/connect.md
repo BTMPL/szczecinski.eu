@@ -29,7 +29,8 @@ const App = (props) => (
   </div>
 );
 ```
-[Uruchom w codesandbox](https://codesandbox.io/s/lpzj57kjyz)
+
+<iframe src="https://codesandbox.io/embed/lpzj57kjyz" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Jak widać, Redux nie przekazuje nam domyślnie danych jakie przechowuje w stanie. Jest to zabieg celowy mający na celu zapobieganie zarówno zbędnemu re-renderowaniu się komponentu jak i "zaśmiecanie" go zbędnymi informacjami.
 

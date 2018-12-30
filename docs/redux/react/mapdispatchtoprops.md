@@ -35,7 +35,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
 ```
-[Uruchom w codesandbox](https://codesandbox.io/s/z6znp43m9l)
+
+<iframe src="https://codesandbox.io/embed/z6znp43m9l" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Dzięki temu zabiegowi nasz "nie połączony" komponent `App` gotowy jest do wykorzystania w innej części aplikacji, lub innej aplikacji, być może bez Reduxa.
 
