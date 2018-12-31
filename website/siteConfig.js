@@ -81,7 +81,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Wszelkie prawa zastrzeżone © ${new Date().getFullYear()}`,
+  copyright: `Bartosz Szczeciński © ${new Date().getFullYear()}`,
 
   usePrism: ['jsx'],
   highlight: {

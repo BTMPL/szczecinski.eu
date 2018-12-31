@@ -28,7 +28,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="nav-footer" id="footer">
-        <section className="copyright">{this.props.config.copyright}</section>
+        <section className="copyright">{this.props.config.copyright} Materiał dostępny na zasadach <a href="https://github.com/BTMPL/szczecinski.eu/blob/master/LICENSE">licencji MIT</a>.</section>
         <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2680322-37"></script>
         <script dangerouslySetInnerHTML={{__html: `
           window.dataLayer = window.dataLayer || [];
