@@ -34,4 +34,6 @@ class Tweet extends React.Component {
 ReactDOM.render(<Tweet />, document.getElementById('root'));    
 ```
 
+<iframe src="https://codesandbox.io/embed/vxq16wo77" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 W ten sposób określamy także i ograniczamy API naszego komponentu - teraz za każdym razem, kiedy jako konsumenci biblioteki chcemy wyrenderować Tweet używamy jednego prostego komponentu, który wewnętrznie używa mniejszych komponentów, które jego twórca może wyeksportować z biblioteki i umożliwić nam na użycie w innych miejscach aplikacji.

@@ -94,6 +94,8 @@ Po wpisaniu treści pojawi się dodatkowy paragraf zawierający podgląd wpisywa
   }
 ```
 
+<iframe src="https://codesandbox.io/embed/jn9o3l311w" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 Funkcja `setState` posiada też drugą formę, w której jako pierwszy parametr możemy przekazać funkcję, która w momencie aktualizacji stanu zostanie wywołana z jego aktualną wartością. Przydaje się to głównie w przypadku modyfikowania stanu w oparciu o jego aktualną wartość (np. zwiększenie o 1, lub dodanie do tablicy).
 
 W przypadku, kiedy użyli byśmy poprzedniej notacji, dane mogły by być nieprawidłowe w wyniku optymalizacji (batching akcji) React:

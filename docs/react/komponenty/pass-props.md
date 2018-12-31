@@ -62,5 +62,7 @@ const TweetData = {
 ReactDOM.render(<Tweet tweet={TweetData} />, document.getElementById('root'));
 ```
 
+<iframe src="https://codesandbox.io/embed/mqqwrlvwn9" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 > #### Uwaga
 > Jeżeli komponent zawiera tylko jeden bezpośredni komponent potomny, `props.children` będzie właśnie tym komponentem, lecz jeżeli komponent zawiera więcej niże jeden bezpośredni komponent potomny, `props.children` będzie tablicą komponentów. W celu zapewnienia spójnej obsługi takich sytuacji zaleca się użycie API [React.Children](https://reactjs.org/docs/react-api.html#reactchildren).

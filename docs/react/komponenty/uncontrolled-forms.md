@@ -68,6 +68,8 @@ ReactDOM.render(<div>
 </div>, document.getElementById('root'));   
 ```
 
+<iframe src="https://codesandbox.io/embed/kov9lw6q3o" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 Poza zastosowaniem w formularzach, referencje przydatne są wszędzie tam, gdzie potrzebujemy odczytać / zmienić wartości bezpośrednio w DOM, przykładowo w celu pobrania wymiarów czy pozycji elementu.
 
 ## referencje na komponent
