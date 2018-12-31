@@ -5,7 +5,7 @@ title: Instalacja
 Redux dystrybuowany jest w postaci jednej paczki, zawierającej liczne nazwane eksporty. Aby dodać ją do swojego projektu wywołaj polecenie:
 
 ```bash
-npm install redux -D
+npm install redux
 ```
 
 W pakiecie znajdują się źródła oraz biblioteka skompilowana do formatu ES6 oraz ES Modules. Ponieważ zminifikowana wersja to około 6kB nie musisz martwić się o tree shaking i inne mechanizmy zminiejszające kod.

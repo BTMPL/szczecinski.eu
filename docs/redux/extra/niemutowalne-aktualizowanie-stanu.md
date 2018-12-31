@@ -82,7 +82,7 @@ Aktualizowanie stanu w ten sposób jest wciąż dosyć kłopotliwe, szczególnie
 W celu wykorzystania Immera w naszych reducerach potrzebować będziemy jego metody `produce`.
 
 ```bash
-npm install immer -D
+npm install immer
 ```
 
 Jeżeli naszym zadaniem jest zmiana statusu todo o id = 1:

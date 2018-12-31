@@ -5,7 +5,7 @@ title: redux-immutable-state-invariant
 [immutable-state-invariant](https://github.com/leoasis/redux-immutable-state-invariant) to kolejne małe middleware które pozwala nam sprawdzić, czy nasze reducery przypadkiem nie mutują stanu na żadnym etapie jego aktualizacji. Przydatne jest głównie w przypadku początkujących developerów:
 
 ```bash
-npm install react-invariant-state-middleware -D
+npm install react-invariant-state-middleware
 ```
 
 ```js

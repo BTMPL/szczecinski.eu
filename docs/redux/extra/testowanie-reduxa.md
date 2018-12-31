@@ -32,7 +32,7 @@ expect(updateCounter()).toEqual({
 Jeżeli musimy przetestować asynchroniczne kreatory akcji możemy oczywiście użyć `createStore` w celu utworzenia store dla naszych testów (albo zaimportować dokładnie ten sam, którego używa nasza aplikacji). Możemy także skorzystać z biblioteki [redux-mock-store](https://github.com/dmitry-zaets/redux-mock-store).
 
 ```bash
-npm install redux-mock-store -D
+npm install redux-mock-store
 ```
 
 W naszych testach zastępujemy `createStore` z `redux` metodą `configureStore` z `redux-mock-store`:
