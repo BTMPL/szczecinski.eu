@@ -125,7 +125,7 @@ const resetHandler = () => 0;
 
 const initialState = 0;
 export const reducer = (state = initialState, action) => {
-  const actionMape = {
+  const actionMap = {
     INCREMENT_COUNTER: incrementActionHandler,
     DECREMENT_COUNTER: decrementActionHandler,
     RESET_COUNTER: resetHandler
