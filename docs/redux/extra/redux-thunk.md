@@ -7,7 +7,7 @@ W sekcji poświęconej akcjom i kreatorom akcji poznaliśmy kilka ograniczeń:
 - kreatory akcji muszą być synchroniczne,
 - kreatory akcji nie mają dostępu do stanu Reduxa
 
-Oznacza to ,ze nie możemy używać kreatorów np. do pobrania danych z API i przekazania ich do Reduxa; wszelkie tego typu operacje musiały by mieć miejsce w cyklu zycia komponentu. Nieco komplikuje to działanie Reduxa:
+Oznacza to ,ze nie możemy używać kreatorów np. do pobrania danych z API i przekazania ich do Reduxa; wszelkie tego typu operacje musiały by mieć miejsce w cyklu życia komponentu. Nieco komplikuje to działanie Reduxa:
 
 1. Komponent rozpoczyna pobieranie danych
 2. Komponent przekazuje dane do akcji
