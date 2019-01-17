@@ -1,0 +1,5 @@
+---
+title: Przykład zastosowania: zakładki
+---
+
+??
