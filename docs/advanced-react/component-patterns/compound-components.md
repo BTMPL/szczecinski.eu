@@ -195,7 +195,7 @@ nasz komponent może po prostu nie wyświetlić ostatniego elementu, a w skrajny
 
 Wzorzec ten nadaje się głównie w przypadkach, kiedy tworzymy komponenty "mało elastyczne", skupiając się głównie na logice a nie wyglądzie komponentu czy możliwości jego modyfikacji (rozszerzenia) przez użytkownika.
 
-Stworzony przez nas komponent o ile wygodny w przypadku, gdy używamy go wraz z jego ograniczeniami, staje się skomplikowany lub wręcz nieprzydatny jeżeli chcemy wdrożyć coś, co wykracza poza jego funkcjonalność (np. zablokowane zakładki, wjeżdżanie zakładek z lewej/prawej strony i jednoczesne ukrywanie nowych) - o ile autor komponentu nie przewidział wszystkich naszych zachcianek, jesteśmy ograniczeni jego wizją.
+Stworzony przez nas komponent - o ile wygodny w przypadku, gdy używamy go wraz z jego ograniczeniami - staje się skomplikowany lub wręcz nieprzydatny jeżeli chcemy wdrożyć coś, co wykracza poza jego funkcjonalność (np. zablokowane zakładki, wjeżdżanie zakładek z lewej/prawej strony i jednoczesne ukrywanie nowych) - o ile autor komponentu nie przewidział wszystkich naszych zachcianek, jesteśmy ograniczeni jego wizją.
 
 ## W praktyce
 
