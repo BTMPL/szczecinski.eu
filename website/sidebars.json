@@ -81,32 +81,24 @@
       "es6/decorators"
     ]
   },
-  "react-wzorce": {
-    "Wprowadzenie": ["react-wzorce/intro"],
-    "Komponenty złożone": [
-      "react-wzorce/komponenty-zlozone/intro",
-      "react-wzorce/komponenty-zlozone/przyklad-zakladki"
-    ],
-    "Komponenty HoC": [
-      "react-wzorce/komponenty-hoc/intro",
-      "react-wzorce/komponenty-hoc/przyklad-pobieranie-danych"
-    ],
-    "Render prop": [
-      "react-wzorce/render-prop/intro",
-      "react-wzorce/render-prop/przyklad-dynamiczne-ui",
-      "react-wzorce/render-prop/przyklad-pobieranie-danych"
+  "advanced-react": {
+    "Wprowadzenie": ["advanced-react/intro"],
+    "Strukturowanie komponentów": [
+      "advanced-react/component-patterns/compound-components",
+      "advanced-react/component-patterns/high-order-components",
+      "advanced-react/component-patterns/render-props"
     ],
     "Context": [
-      "react-wzorce/context/intro",
-      "react-wzorce/context/przyklad-przekazywanie-danych"
+      "advanced-react/context/intro",
+      "advanced-react/context/przyklad-przekazywanie-danych"
     ],
     "Hooks": [
-      "react-wzorce/hooks/intro",
-      "react-wzorce/hooks/useState",
-      "react-wzorce/hooks/useEffect",
-      "react-wzorce/hooks/useContext",
-      "react-wzorce/hooks/pozostale",
-      "react-wzorce/hooks/wlasneHooki"
+      "advanced-react/hooks/intro",
+      "advanced-react/hooks/useState",
+      "advanced-react/hooks/useEffect",
+      "advanced-react/hooks/useContext",
+      "advanced-react/hooks/pozostale",
+      "advanced-react/hooks/wlasneHooki"
     ]
   }
 }

@@ -1,5 +1,0 @@
----
-title: Przykład zastosowania: zakładki
----
-
-??
