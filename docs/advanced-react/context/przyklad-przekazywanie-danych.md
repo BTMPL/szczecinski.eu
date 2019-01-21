@@ -1,5 +1,5 @@
 ---
-title: Przykład zastosowania: przekazywanie danych
+title: Przykład zastosowania: system translacji
 ---
 
 ??
