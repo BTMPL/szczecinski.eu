@@ -2,7 +2,7 @@
 title: Render Props
 ---
 
-Render Props stanowi poniekąd rozszerzoną i ulepszoną wersję wzorca komponentu złożonego. Podobnie jak on, skupia się na udostępnieniu logiki komponentu developerowi, ale zwykle nie definiuje on żadnych elementów graficznych, w pełni polegając na implementacji.
+Render Props stanowi poniekąd rozszerzoną i ulepszoną wersję wzorca komponentu złożonego oraz HoC. Podobnie jak one, skupia się na udostępnieniu logiki komponentu developerowi, ale zwykle nie definiuje on żadnych elementów graficznych, w pełni polegając na implementacji.
 
 W celu zaprezentowania wzorca postaramy się zmodyfikować mechanizm zakładek, który wdrożyliśmy w sekcji [Komponenty złożone](compound-components).
 
@@ -11,23 +11,35 @@ Przypomnijmy sobie jego ograniczenia:
 - ograniczone możliwości modyfikacji UI
 - brak lub ograniczone możliwości modyfikacji logiki (np. oznaczanie zakładki jako zablokowana)
 
-Do tej pory wszystkie nasze przykłady zakładały, że dzieci przekazywane do komponentu stanowią z pkt. widzenia Reacta elementy (instancje komponentów, łańcuchy tekstu, liczby etc.). Nie oznacza to jednak, że są to jedyne opcje, co do tego, co możemy przekazać do komponentu. Szczególnym przykładem jest przekazanie jako `props.children` funkcji:
+W nowym wzorcu definiujemy prop `render`, do którego przekazujemy funkcję z logiką:
 
 ```jsx
 const Component = props => {
-  return props.children;
+  return props.render();
 };
 
 const testowaFunkcja = () => {
   return "Hello world!";
 };
 
-<Component>{testowaFunkcja}</Component>;
+<Component render={testowaFunkcja} />;
 ```
 
-Gdyby nasz komponent spróbował by wyrenderować takie dziecko, otrzymamy komunikat informujący, że funkcje nie są poprawnym dzieckiem komponentu:
+Funkcja ta zostaje wywołana przez komponent i zwrócona jako jego element.
 
-> Warning: Functions are not valid as a React child. This may happen if you return a Component instead of <Component /> from render.
+## FaC - function as child
+
+Nazwa "render prop" odnosi się do faktu, że mechanizm renderowania przekazujemy jako prop o nazwie `render`:
+
+```jsx
+<Component render={() => {
+  return "Hello world!"
+}}>
+```
+
+Istnieje także specyficzna wersja tego wzorca, w której funkcję przekazujemy jako prop `children` - wariacja ta nosi nazwę "function as child".
+
+Do tej pory wszystkie nasze przykłady zakładały, że dzieci przekazywane do komponentu stanowią z pkt. widzenia Reacta elementy (instancje komponentów, łańcuchy tekstu, liczby etc.). Nie oznacza to jednak, że są to jedyne opcje, co do tego, co możemy przekazać do komponentu.
 
 Jeżeli `Component` założyłby, że `props.children` będzie funkcją, może ją po prostu wywołać, i zwrócić jej wynik:
 
@@ -37,9 +49,7 @@ const Component = props => {
 };
 ```
 
-co doprowadziło by do poprawnego wyrenderowania łańcucha "Hello world!".
-
-> Czasem możesz spotkać się z tym samym wzorcem pod nazwą "fac" - "function as child" (funkcja jako dziecko).
+W kolejnych przykładach używać będziemy właśnie tej wariacji - nie jest to reguła, ale osobista preferencja :)
 
 ## Przykład - komponent `Tabs`
 
