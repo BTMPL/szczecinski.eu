@@ -26,7 +26,7 @@ const GrandChild = props => {
 ReactDOM.render(<App grandchildName={"John"} />, root);
 ```
 
-Jak widać `App` "zna" dane, które chce przekazać do `Grandchild`, a wszystkie komponenty po drodze - w ten czy inny sposób - muszą być świadome tego, że jakieś dane należy przekazać. Robią to albo poprzez przedkazanie wszystkich propsów jakie otrzymały (`{...props`}) albo poprzez przekazanie tylko konretnych danych.
+Jak widać `App` "zna" dane, które chce przekazać do `Grandchild`, a wszystkie komponenty po drodze - w ten czy inny sposób - muszą być świadome tego, że jakieś dane należy przekazać. Robią to albo poprzez przekazanie wszystkich propsów jakie otrzymały (`{...props`}) albo poprzez przekazanie tylko konkretnych danych.
 
 Sytuację taką nazywamy "prop drilling" i jest ona niepożądana z kilku powodów:
 
@@ -51,7 +51,7 @@ API Consumera korzysta ze wzorca render props.
 
 ## React.createContext
 
-W celu stowrzenia kontekstu, używamy metody `createContext`, kóra zwraca nam parę Provider + Consumer:
+W celu stworzenia kontekstu, używamy metody `createContext`, która zwraca nam parę Provider + Consumer:
 
 ```jsx
 const MyContext = React.createContext(fallbackValue);
@@ -60,7 +60,7 @@ const MyContext = React.createContext(fallbackValue);
 
 > O tym czym jest `fallbackValue` dowiesz się w części poświęconej konsumerowi
 
-Ponieważ w zdecydowanej większości przypakdów, Provider i Consumer będą używane przez komponenty znajdujące się w inncych plikach, Context zwykle tworzony jest przez oddzielne moduły, np:
+Ponieważ w zdecydowanej większości przypadków, Provider i Consumer będą używane przez komponenty znajdujące się w innych plikach, Context zwykle tworzony jest przez oddzielne moduły, np:
 
 ```jsx
 // MyContext.js
@@ -143,7 +143,7 @@ Wynika z tego kilka rzeczy, o których warto pamiętać:
 
 ### fallbackValue
 
-Może zdarzyć się sytuacja, w której konsumer zostanie użyty bez odpowiadającego mu providera - można sobie to wyborazić np. w testach jednostkowych czy sytuacji, w której struktura tworzona jest na tyle dynamicznie, że nie zawsze mamy nad nią kontrolę. W tej sytuacji jako wartość, którą będzie widział konsument jest wartość przekazana do funkcjia `React.createContext`.
+Może zdarzyć się sytuacja, w której konsumer zostanie użyty bez odpowiadającego mu providera - można sobie to wyobrazić np. w testach jednostkowych czy sytuacji, w której struktura tworzona jest na tyle dynamicznie, że nie zawsze mamy nad nią kontrolę. W tej sytuacji jako wartość, którą będzie widział konsument jest wartość przekazana do funkcja `React.createContext`.
 
 Wbrew nazwie jaką można znaleźć w dokumentacji (`defaultValue`) nie jest to wartość domyślna - nie jest ona przekazywana do konsumerów, osadzonych w providerze nie deklarującym propu `value`.
 
@@ -151,7 +151,7 @@ Wbrew nazwie jaką można znaleźć w dokumentacji (`defaultValue`) nie jest to 
 
 Istnieje jeszcze druga metoda pozwalająca na uzyskanie dostępu w komponentach opartych o klasy i to uzyskanie go w taki sposób, że można go następnie wykorzystać w funkcjach cyklu życia - `contextType`.
 
-Mechanism ten wprowadzony został jako "most" łączący stary i nowy interfejs Context. W starym, w celu wykorzystania kontekstu należało zadeklarować, jakich danych w globalnym obiekcie kontekstu oczekuje nasz komponent poprzez zdefiniowanie `contextTypes`, działającym podobnie jak `propTypes` i uzyskać do nich dostęp na obiekcie `this.context`
+Mechanizm ten wprowadzony został jako "most" łączący stary i nowy interfejs Context. W starym, w celu wykorzystania kontekstu należało zadeklarować, jakich danych w globalnym obiekcie kontekstu oczekuje nasz komponent poprzez zdefiniowanie `contextTypes`, działającym podobnie jak `propTypes` i uzyskać do nich dostęp na obiekcie `this.context`
 
 Nowe API wprowadza możliwość pobrania **jednego** kontekstu w ten sposób:
 
