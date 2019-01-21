@@ -66,15 +66,14 @@ Ponieważ w zdecydowanej większości przypakdów, Provider i Consumer będą u�
 // MyContext.js
 const Context = React.createContext(fallbackValue);
 
-export {
-  Context.Provder as Provider,
-  Context.Consumer as Consumer
-};
+const { Provider, Consumer } = Context;
+
+export { Provider, Consumer };
 export default Context;
 
 // App.js
 
-import { Provider } from './MyContext.js';
+import { Provider } from "./MyContext.js";
 ```
 
 ## Provider
@@ -90,6 +89,34 @@ const App = () => {
   );
 };
 ```
+
+Podobnie jak dane, Provider może przekazywać także funkcje:
+
+```jsx
+class App extends React.Component {
+  state = { random: 42 };
+
+  updateRandom = () =>
+    this.setState(state => ({
+      random: state.random + 1
+    }));
+
+  render() {
+    return (
+      <Provider
+        value={{
+          random: this.state.random,
+          updateRandom: this.updateRandom
+        }}
+      >
+        <Home />
+      </Provider>
+    );
+  }
+}
+```
+
+> Pamiętaj o poprawnym bindowaniu funkcji, które korzystają z `this`!
 
 ## Consumer
 
