@@ -90,7 +90,8 @@
     ],
     "Context": [
       "advanced-react/context/intro",
-      "advanced-react/context/przyklad-przekazywanie-danych"
+      "advanced-react/context/przyklad-przekazywanie-danych",
+      "advanced-react/context/zaawansowane-opcje"
     ],
     "Hooks": [
       "advanced-react/hooks/intro",

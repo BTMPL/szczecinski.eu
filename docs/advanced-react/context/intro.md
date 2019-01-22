@@ -120,7 +120,7 @@ class App extends React.Component {
 
 ## Consumer
 
-Consumer zajmuje się pobieraniem danych udostępnionych w kontekście i przekazywaniem ich do swojego pod-drzewa. Nie przyjmuje on żadnych innych propsów.
+Consumer zajmuje się pobieraniem danych udostępnionych w kontekście i przekazywaniem ich do swojego pod-drzewa.
 
 ```jsx
 const Child = () => {
@@ -140,6 +140,8 @@ Wynika z tego kilka rzeczy, o których warto pamiętać:
 
 - re-renderowanie się konsumera pomija wszelkie `shouldComponentUpdate` lub `React.memo` komponentu, w którym jest użyty (co pozwala wyeliminować problemy z blokowaniem aktualizacji jakie występują np. przy połączeniu react-router + react-redux)
 - dane udostępniane przez kompnent Consumer dostępne są tylko w JSX - nie można użyć ich w funkcjach cyklu życia (jest to możliwe z pewnymi ograniczeniami)
+
+> Consumer przyjmuje jeden dodatkowy prop - `unstable_observedBits` - więcej na ten temat dowiesz się z rodziału "Context > Zaawansowane opcje".
 
 ### fallbackValue
 
