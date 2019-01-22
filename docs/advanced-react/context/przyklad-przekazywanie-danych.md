@@ -4,7 +4,7 @@ title: Przykład zastosowania: system translacji
 
 Dobrym przykładem mechanizmu, który wykorzystuje Context jest np. mechanizm tłumaczenia komunikatów: aplikacja powinna udostępniać dane wszystkim komponentom, i pozwalać na zmianę języka "w locie".
 
-Konteks powinien być dostępny zarówno dla głównego komponentu aplikacji jak i w dowolnym innym module więc zaczniemy od zdefiniowania dla niego oddzielnego modułu, co pozwoli nam na importowanie go w dowolnym miejscu. Moduł eksportuje zarówno cały kontekst jak i oddzielnie `Provider` i `Consumer` jako nazwane eksporty:
+Konteks powinien być dostępny zarówno dla głównego komponentu aplikacji jak i w dowolnym innym module więc zaczniemy od zdefiniowania dla niego oddzielnego modułu, co pozwoli nam na importowanie go w dowolnym miejscu. Moduł eksportuje zarówno cały Context jak i oddzielnie `Provider` i `Consumer` jako nazwane eksporty:
 
 ```js
 import React from "react";
@@ -74,13 +74,13 @@ const T = props => <Consumer>{({ labels }) => labels[props.label]}</Consumer>;
 export default T;
 ```
 
-Komponent ten jest bardzo prosty (czytaj: nie posiada zaawansowanych funkcjonalności): jedyne co robi, to pobiera z kontekstu obiekt `labels` i wyświetla wartość, dla klucza, który został mu przekazany, np:
+Komponent ten jest bardzo prosty (czytaj: nie posiada zaawansowanych funkcjonalności): jedyne co robi, to pobiera z Context obiekt `labels` i wyświetla wartość, dla klucza, który został mu przekazany, np:
 
 ```jsx
 <T label={"hello"} />
 ```
 
-Spowoduje wyświetlenie wartości odpowiadającej kluczowi "hello", z obiektu przekazanego przez kontekst.
+Spowoduje wyświetlenie wartości odpowiadającej kluczowi "hello", z obiektu przekazanego przez Context.
 
 W tym momencie możemy już używać komponentu `T` w komponencie `Home` w celu dodania dynamicznego tłumaczenia. Wszędzie tam, gdzie chcieli byśmy umożliwić zmianę języka, możemy skorzystać z udostępnionej metody:
 

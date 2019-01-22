@@ -25,7 +25,7 @@ const Child1 = () => {
 
 Jeżeli komponent taki renderuje jakieś skomplikowane API (lub jest renderowany wielokrotnie) może mieć to negatywny wpływ na wydajność całej aplikacji.
 
-Aby temu zapobiec, Context może wysłać informacje o tym, co dokładnie uległo zmianie. W tym celu używa mechanizmu "observed bits". Podobnie jak w przypadku Provider + Consumer mechanizm ten składa się z 2 elementów i wykorzystuje operacje na bitach ([artykuł MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)).
+Aby temu zapobiec, kontekst może wysłać informacje o tym, co dokładnie uległo zmianie. W tym celu używa mechanizmu "observed bits". Podobnie jak w przypadku Provider + Consumer mechanizm ten składa się z 2 elementów i wykorzystuje operacje na bitach ([artykuł MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)).
 
 > #### Uwaga
 >
@@ -65,7 +65,7 @@ const CONTEXT_OBSERVABLE_MAP = {
 };
 ```
 
-Aby poinformować co uległo zmianie, używamy drugiego argumentu `createContextz, który przy każdej aktualizacji wywołany jest z poprzednią i przyszłą wartością:
+Aby poinformować co uległo zmianie, używamy drugiego argumentu `createContext`, który przy każdej aktualizacji wywołany jest z poprzednią i przyszłą wartością:
 
 ```js
 const Context = React.createContext(
@@ -83,7 +83,7 @@ const Context = React.createContext(
 );
 ```
 
-Teraz, za każdym razem kiedy kontekst ulegnie zmianie, uruchomiona zostanie funkcja (changedBits) i wykonana zostanie logika:
+Teraz, za każdym razem kiedy kontekst ulegnie zmianie, uruchomiona zostanie funkcja (`changedBits`) i wykonana zostanie logika:
 
 - załóż wynik `0b00`
 - jeżeli zmieniło się `value1` - dodaj `0b01`
