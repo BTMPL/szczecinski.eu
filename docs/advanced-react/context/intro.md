@@ -36,7 +36,7 @@ Sytuację taką nazywamy "prop drilling" i jest ona niepożądana z kilku powod�
 
 ## Pojęcie kontekstu
 
-W celu rozwiązania tego problemu React udostępnia oddzielne API znane jako "kontekst" (ang. "context") - pozwala ono na zdefiniowanie mechanizmu przekazywania i konsumowania danych pomiędzy niezależnymi elementami i jest podstawowym budulcem wielu znanych bibliotek tj. Redux, React-Router czy Formik.
+W celu rozwiązania tego problemu React udostępnia oddzielne API znane jako "kontekst" (ang. "Context") - pozwala ono na zdefiniowanie mechanizmu przekazywania i konsumowania danych pomiędzy niezależnymi elementami i jest podstawowym budulcem wielu znanych bibliotek tj. Redux, React-Router czy Formik.
 
 API kontekstu istniało w React od bardzo dawna, ale aż do wersji 16.3 było one celowo "pomijane" w wielu miejscach dokumentacji. Autorzy React nie byli zadowoleni ze sposobu, w jaki jest ono zrealizowane i ostrzegali, że ulegnie ono zmianie.
 
@@ -60,7 +60,7 @@ const MyContext = React.createContext(fallbackValue);
 
 > O tym czym jest `fallbackValue` dowiesz się w części poświęconej konsumerowi
 
-Ponieważ w zdecydowanej większości przypadków, Provider i Consumer będą używane przez komponenty znajdujące się w innych plikach, Context zwykle tworzony jest przez oddzielne moduły, np:
+Ponieważ w zdecydowanej większości przypadków, Provider i Consumer będą używane przez komponenty znajdujące się w innych plikach, kontekst zwykle tworzony jest przez oddzielne moduły, np:
 
 ```jsx
 // MyContext.js
@@ -153,7 +153,7 @@ Wbrew nazwie jaką można znaleźć w dokumentacji (`defaultValue`) nie jest to 
 
 Istnieje jeszcze druga metoda pozwalająca na uzyskanie dostępu w komponentach opartych o klasy i to uzyskanie go w taki sposób, że można go następnie wykorzystać w funkcjach cyklu życia - `contextType`.
 
-Mechanizm ten wprowadzony został jako "most" łączący stary i nowy interfejs Context. W starym, w celu wykorzystania kontekstu należało zadeklarować, jakich danych w globalnym obiekcie kontekstu oczekuje nasz komponent poprzez zdefiniowanie `contextTypes`, działającym podobnie jak `propTypes` i uzyskać do nich dostęp na obiekcie `this.context`
+Mechanizm ten wprowadzony został jako "most" łączący stary i nowy interfejs kontekstu. W starym, w celu wykorzystania kontekstu należało zadeklarować, jakich danych w globalnym obiekcie kontekstu oczekuje nasz komponent poprzez zdefiniowanie `contextTypes`, działającym podobnie jak `propTypes` i uzyskać do nich dostęp na obiekcie `this.context`
 
 Nowe API wprowadza możliwość pobrania **jednego** kontekstu w ten sposób:
 
