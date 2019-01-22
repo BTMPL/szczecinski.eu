@@ -15,7 +15,7 @@ const { Provider, Consumer } = TranslationContext;
 export { Provider, Consumer };
 ```
 
-Dane dotyczące tłumaczeń możemy zdefinować w oddzielnym pliku lub w pliku wejściowym. Tworzymy także komponent główny przechowujący informacje nt. aktualnie ustawionego języka:
+Dane dotyczące tłumaczeń możemy zdefiniować w oddzielnym pliku lub w pliku wejściowym. Tworzymy także komponent główny przechowujący informacje nt. aktualnie ustawionego języka:
 
 ```jsx
 const translation = {

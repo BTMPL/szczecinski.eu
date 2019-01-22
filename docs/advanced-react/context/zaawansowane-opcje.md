@@ -42,7 +42,7 @@ const Context = React.createContext({
 });
 ```
 
-Aplikacja posiadać będzie również komponenty zainteresowane jadną albo drugą, ale nie oboma wartościami:
+Aplikacja posiadać będzie również komponenty zainteresowane jedną albo drugą, ale nie oboma wartościami:
 
 ```jsx
 const Child1 = () => {
