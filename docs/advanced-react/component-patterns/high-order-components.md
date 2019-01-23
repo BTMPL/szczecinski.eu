@@ -15,7 +15,7 @@ const withLog = func => {
   if (process.env.NOVE_ENV === "development") {
     return (...args) => {
       console.log("Funkcja wywołana z argumentami: ", args);
-      const result = func(args);
+      const result = func(...args);
       console.log("Wynik: ", result);
       return result;
     };
@@ -25,7 +25,7 @@ const withLog = func => {
 };
 
 const kwadratWithLog = withLog(kwadrat);
-console.log(kwadrat(9));
+console.log(kwadratWithLog(9));
 ```
 
 Poprzez wywołanie `withLog(kwadrat)` tworzymy nową funkcje. Zwrócona funkcja pobiera dowolną ilość argumentów (`...args`) a wywołana wywołuje oryginalną funkcje. Dodatkowo, w zależności od tego w jakim środowisku działamy zobaczymy także informacje o tym, z jakimi argumentami wywołana została oryginalna funkcja oraz co zwróciła.
