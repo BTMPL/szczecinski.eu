@@ -12,16 +12,16 @@ const kwadrat = a => a * a;
 
 // definicja logera w postaci HoC
 const withLog = func => {
-  return (...args) => {
-    if (process.env.NOVE_ENV === "development") {
+  if (process.env.NOVE_ENV === "development") {
+    return (...args) => {
       console.log("Funkcja wywołana z argumentami: ", args);
-    }
-    const result = func(args);
-    if (process.env.NOVE_ENV === "development") {
+      const result = func(args);
       console.log("Wynik: ", result);
-    }
-    return result;
-  };
+      return result;
+    };
+  } else {
+    return func;
+  }
 };
 
 const kwadratWithLog = withLog(kwadrat);
