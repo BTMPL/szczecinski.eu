@@ -96,6 +96,7 @@
     "Hooks": [
       "advanced-react/hooks/intro",
       "advanced-react/hooks/useState",
+      "advanced-react/hooks/useReducer",
       "advanced-react/hooks/useEffect",
       "advanced-react/hooks/useContext",
       "advanced-react/hooks/pozostale",
