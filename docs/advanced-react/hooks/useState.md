@@ -98,7 +98,7 @@ Jeżeli utworzymy komponent zawierający wywołanie `useState` w różnych kolej
 const User = () => {
   const [firstName, setFirstName] = useState("");
   if (firstName) {
-    // Nazwisko nie jest nam potrzebne, do czasu aż użutkownik poda swoje imie
+    // Nazwisko nie jest nam potrzebne, do czasu aż użytkownik poda swoje imie
     const [lastName, setLastName] = useState("");
   }
   const [email, setEmail] = useState("");
