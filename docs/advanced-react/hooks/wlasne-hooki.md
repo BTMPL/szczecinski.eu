@@ -96,7 +96,7 @@ const App2 = () => {
 
 Teraz nasz komponent `App` nie jest już w żaden sposób obarczony logiką pobierania danych z Github - w każdym momencie możemy podmienić wewnętrzną logikę `useGithub` oraz współdzielić ją z innymi komponentami / Hookami.
 
-### Przykład 2: obsługa formularzy
+### Przykład 2: Obsługa formularzy
 
 inny przydatny przykład, to Hook pozwalający na łatwą obsługę pól formularza, np. aby utworzyć re-używalnego Hooka dla pól tekstowych (numerycznych, email etc.):
 

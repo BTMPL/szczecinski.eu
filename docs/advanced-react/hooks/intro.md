@@ -6,7 +6,7 @@ title: Wprowadzenie
 
 Hooki dostępne są jako seria funkcji w obiekcie `React`. Ich nazwa zawsze zaczyna się od słowa `use`: `useState`, `useEffect` czy `useReducer`.
 
-Dostępne są one **wyłącznie** w komponentach opartych o funkcje i nie ma możliwości wykorzystania ich zarówno w komponentach klasowych i jak i poza komponentami.
+Dostępne są one **wyłącznie** w komponentach opartych o funkcje i nie ma możliwości wykorzystania ich zarówno w komponentach klasowych i jak i poza komponentami (z wyjątkiem osadzania wewnątrz innych Hooków).
 
 > #### Uwaga
 >
