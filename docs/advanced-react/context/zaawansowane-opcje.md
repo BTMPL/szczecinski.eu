@@ -123,8 +123,8 @@ const Child2 = () => {
 
 Po tej zmianie komponenty będą re-renderować się tylko, jeżeli zaszła zmiana w odpowiedniej informacji przechowywanej w kontekście.
 
-### Kompletny przykład
+## Kompletny przykład
 
-> Otwórz konsolę w Code Sandbox by zobaczyć informacje dotyczące re-renderowania się komponentów.
+> Otwórz konsolę w CodeSandbox by zobaczyć informacje dotyczące re-renderowania się komponentów.
 
 <iframe src="https://codesandbox.io/embed/x3jrmjk1xo" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>

@@ -91,3 +91,37 @@ Co stanie się jeżeli wyrenderujemy:
 Czy po kliknięciu w jeden guzik zmianie ulegnie wartość drugiego? **Nie.** React nie używa wartości początkowych ani innych danych do rozróżnienia poszczególnych Hooków - korzysta z kolejności ich wywołania, która śledzona jest wewnętrznie przez React per-komponent.
 
 ## Kolejność wykonywania Hooków jest istotna!
+
+Jeżeli utworzymy komponent zawierający wywołanie `useState` w różnych kolejnościach, np:
+
+```jsx
+const User = () => {
+  const [firstName, setFirstName] = useState("");
+  if (firstName) {
+    // Nazwisko nie jest nam potrzebne, do czasu aż użutkownik poda swoje imie
+    const [lastName, setLastName] = useState("");
+  }
+  const [email, setEmail] = useState("");
+
+  return (
+    <div>
+      <input value={firstName} onChange={e => setFirstName(e.target.value)} />
+      <br />
+      {firstName && (
+        <React.Fragment>
+          <input value={lastName} onChange={e => setLastName(e.target.value)} />
+          <br />
+        </React.Fragment>
+      )}
+      <input value={email} onChange={e => setEmail(e.target.value)} />
+    </div>
+  );
+};
+```
+
+Powodowało by to kilka problemów:
+
+- po pierwsze, z uwagi na block-level scope, `lastName` i `setLastName` dostępne są tylko w swoim bloku, więc nie możemy użyć ich w JSX,
+- jeżeli obejdziemy to używając np. `var`, wprowadzimy wartość w pole z emailem i następnie w pole z imieniem, okaże się, że wartość email została przeniesiona do pola na nazwisko
+
+Dzieje się tak, ponieważ dodaliśmy wywołanie nowego hooka, tym samym zmieniając ich kolejność - w takiej sytuacji React nie zauważa wstawienia nowego `useState` w środek, i po prostu uznaje, że drugie wywołanie jest wywołaniem dla emaila, ponieważ tak było w poprzednim cyklu.

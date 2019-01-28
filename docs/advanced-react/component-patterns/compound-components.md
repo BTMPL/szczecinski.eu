@@ -152,7 +152,7 @@ Funkcja renderująca jest nieco prostsza. Jej głównym zadaniem jest wyświetle
 
 Wywołanie `React.Children.toArray(this.props.children)` zwróci nam tablicę elementów dzieci (jeżeli "w ciemno" spróbowali byśmy odwołać się do `this.props.children[0]` mogło by okazać się, że `Tabs` ma tylko jedno dziecko, a wtedy `this.props.children` nie będzie tablicą!), z której wyświetlimy tylko ten, który aktualnie uznajemy za aktywny.
 
-### Kompletny przykład
+## Kompletny przykład
 
 <iframe src="https://codesandbox.io/embed/z6695oqm3m" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
