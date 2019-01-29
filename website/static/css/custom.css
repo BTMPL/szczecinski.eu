@@ -13,6 +13,10 @@ iframe {
   margin-bottom: 20px;
 }
 
+blockquote {
+  color: #24292e;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
   .button {
     width: 100%;
@@ -43,7 +47,7 @@ iframe {
 
   .imageAlignTop.alignCenter .blockImage {
     height: 80px;
-  }  
+  }
 
   .imageAlignTop.alignCenter .blockImage img {
     max-height: 100%;
