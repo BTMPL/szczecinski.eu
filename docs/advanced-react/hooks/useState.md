@@ -47,9 +47,9 @@ class Counter extends React.Component {
 
   return (
     <button onClick={() => {
-      this.setState(state => ({
-        value: state.value + 1
-      }))
+      this.setState({
+        value: this.state.value + 1
+      })
     }}>{this.state.value}</button>
   )
 }
@@ -79,6 +79,36 @@ Komponent możemy utworzyć z określoną wartością początkową, lub zainicjo
 <Counter initialValue={5} />
 ```
 
+### updater
+
+Podobnie jak `this.setState`, również `useState` pozwala na wywołanie funkcji aktualizującej stan przekazując do niej nie nową wartość, ale funkcję, która zostanie wywołana z aktualnym stanem i powinna zwrócić zaktualizowany stan. Rozważmy następującą aplikację, tworzącą prosty stoper:
+
+```jsx
+const [state, setState] = useState(0);
+
+// Więcej o tym Hooku dowiesz się z kolejnego rozdziału - na razie wiedz, że działa
+// on tak jak funkcja `componentDidMount`
+useEffect(() => {
+  setInterval(() => {
+    setState(state + 1);
+  }, 1000);
+}, []);
+```
+
+Na pierwszy rzut oka wydało by się, że działa on poprawnie - po zamontowaniu uruchomi interwał, który co sekundę zaktualizuje stan wywołując go z wartością "aktualny stan + 1". Nie zadzieje się tak, ponieważ wartość zmiennej `state` wewnątrz `setInterval` przechwycona jest tylko raz (w momencie pierwszego renderowania komponentu) i to przez wartość, a nie referencję. Zamiast tego możemy użyć zapisu:
+
+```jsx
+const [state, setState] = useState(0);
+
+useEffect(() => {
+  setInterval(() => {
+    setState(state => state + 1);
+  }, 1000);
+}, []);
+```
+
+## Kolejność wykonywania Hooków jest istotna!
+
 Co stanie się jeżeli wyrenderujemy:
 
 ```jsx
@@ -89,8 +119,6 @@ Co stanie się jeżeli wyrenderujemy:
 ```
 
 Czy po kliknięciu w jeden guzik zmianie ulegnie wartość drugiego? **Nie.** React nie używa wartości początkowych ani innych danych do rozróżnienia poszczególnych Hooków - korzysta z kolejności ich wywołania, która śledzona jest wewnętrznie przez React per-komponent.
-
-## Kolejność wykonywania Hooków jest istotna!
 
 Jeżeli utworzymy komponent zawierający wywołanie `useState` w różnych kolejnościach, np:
 

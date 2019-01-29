@@ -85,3 +85,51 @@ const ZipCode = () => {
   );
 };
 ```
+
+`useRef` może być używany do przechowywania innych danych, nie tylko referencji do DOM. Możesz użyć go wszędzie tam, gdzie asynchronicznie potrzebny jest dostęp do niemutowalnych danych.
+
+Przykładowo, jeżeli chcemy utworzyć aplikację zawierającą stoper (który znamy już z sekcji `useState`), którego użyjemy do zmierzenia czasu jaki zajmuje asynchroniczna operacja:
+
+```jsx
+const [state, setState] = useState(0);
+
+useEffect(() => {
+  setInterval(() => {
+    setState(state => state + 1);
+  }, 1000);
+
+  // udajmy, że operacja zajmuje 5 sekund
+  new Promise(resolve => {
+    setTimeout(resolve, 5000);
+  }).then(() => {
+    console.log(`Operacja asynchroniczna trwała ${state} sekund.`);
+  });
+}, []);
+```
+
+Po 5 sekundach w konsoli otrzymamy informację wskazującą, że operacja trwała 0 sekund - stan znów został przechwycony przez wartość. Zmodyfikujemy zatem naszą aplikację:
+
+```jsx
+const [state, setState] = useState(0);
+
+// Utwórz referencję - zdarzenie to odbywa się tylko raz, w następnych wywołaniach
+// zwrócona zostanie już istniejąca w pamięci referencja
+const stateRef = useRef();
+
+// Zapisz aktualną wartość stanu do referencji
+stateRef.current = state;
+
+useEffect(() => {
+  setInterval(() => {
+    setState(state => state + 1);
+  }, 1000);
+
+  // udajmy, że operacja zajmuje 5 sekund
+  new Promise(resolve => {
+    setTimeout(resolve, 5000);
+  }).then(() => {
+    // Pobierz wartość z referencji, nie stanu
+    console.log(`Operacja asynchroniczna trwała ${stateRef.current} sekund.`);
+  });
+}, []);
+```
