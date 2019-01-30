@@ -2,7 +2,7 @@
 title: useEffect
 ---
 
-Drugą ważną przewagą komponentów klasowych były metody cyklu życia. Hookie wdrażają je w postaci mechanizmu `useEffect`, przy pomocy którego wdrażamy logikę metod `componentDidMount`, `componentDidUpdate` i `componentWillUnmount`.
+Drugą ważną przewagą komponentów klasowych były metody cyklu życia. Hooki wdrażają je w postaci mechanizmu `useEffect`, przy pomocy którego wdrażamy logikę metod `componentDidMount`, `componentDidUpdate` i `componentWillUnmount`.
 
 ## Wywołanie w momencie re-renderowania się komponentu
 
@@ -70,7 +70,7 @@ W tym momencie komponent się re-renderuje i powtarza całość, z pominięciem 
 
 Rozwiązanie jakie osiągnęliśmy jest lepsze, ale wciąż nie idealne - za każdym razem kiedy przewijamy stronę na nowo dodają się i usuwają nasłuchy na zdarzenia. Dzieję się tak zarówno w momencie, kiedy przesuwamy ekran, jak i w momencie kiedy re-renderuje się rodzic naszego komponentu.
 
-Zamiast tego woleli byśmy, by miało to miejsce tylko za pierwszym razem kiedy renderujemy dany komponent i kiedy przestajemy go renderować. `useEffect` pozwala na definiowanie tego mechanizmu za pomocą drugiego argumentu - tablicy wartości, których zmianę chcemy obserwować.
+Zamiast tego wolelibyśmy, by miało to miejsce tylko za pierwszym razem kiedy renderujemy dany komponent i kiedy przestajemy go renderować. `useEffect` pozwala na definiowanie tego mechanizmu za pomocą drugiego argumentu - tablicy wartości, których zmianę chcemy obserwować.
 
 ### Ponowne wywołanie tylko w momencie zmiany wartości
 

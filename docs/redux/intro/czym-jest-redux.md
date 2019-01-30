@@ -30,4 +30,4 @@ Manager stanu powinien być także niezależną od UI warstwą aplikacji - w tym
 
 W 2018 roku twórcy React wprowadzili (lub zapowiedzieli) wiele narzędzi pozwalających na pierwszy rzut oka wyeliminować Redux - mówię tutaj o Context API oraz React Hooks. Również po zapowiedzi Suspense pojawiły się liczne wątki oraz wpisy na blogach wieszczące śmierć Reduxa. Ten jednak trzyma się mocno, głównie z uwagi na to, że Redux to nie tylko mechanizm przekazywania danych pomiędzy komponentami (coś, co miałby zastąpić Context), mechanizm cachowania danych (Suspense) czy abstrakcja logiki (Hooks). Redux to zestaw dobrych praktyk, narzędzi i rozszerzeń, które jeszcze przez długi czas będą istotne.
 
-Redux nie jest też niczym skomplikowanym, na naukę czego musieli byśmy poświęcić wiele tygodni.
+Redux nie jest też niczym skomplikowanym, na naukę czego musielibyśmy poświęcić wiele tygodni.

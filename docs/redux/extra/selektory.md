@@ -32,7 +32,7 @@ Zakładając następujący stan Reduxa:
 }
 ```
 
-za każdym razem, kiedy chcemy wybrać tylko TODO w statusie `in-progress` musieli byśmy pisać:
+za każdym razem, kiedy chcemy wybrać tylko TODO w statusie `in-progress` musielibyśmy pisać:
 
 ```js
 const mapStateToProps = (state) => {

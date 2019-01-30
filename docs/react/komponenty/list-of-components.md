@@ -59,7 +59,7 @@ const TweetList = () => {
 }
 ```
 
-Nasza aplikacja generuje już listę Tweetów, ale nie działa to jeszcze tak, jak byśmy chcieli. Dane o Tweetach pobiera on z aplikacji, a powinien otrzymywać jako parametr, a sama lista - mimo, że jest tablicą - wciąż nie jest w żaden sposób dynamiczna.
+Nasza aplikacja generuje już listę Tweetów, ale nie działa to jeszcze tak, jakbyśmy chcieli. Dane o Tweetach pobiera on z aplikacji, a powinien otrzymywać jako parametr, a sama lista - mimo, że jest tablicą - wciąż nie jest w żaden sposób dynamiczna.
 
 Zmieniliśmy nieco strukturę naszej zmiennej `TweetData` - jest to teraz tablica zawierająca dane 2 Tweetów, a same dane wzbogaciliśmy o klucz `id`, który stanowić będzie nasz `key` dla renderowanej kolekcji Tweetów.
 

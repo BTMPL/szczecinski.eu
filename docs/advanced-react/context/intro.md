@@ -139,13 +139,13 @@ Za każdym razem, kiedy zmieni się wartość `value` przekazana do providera, k
 Wynika z tego kilka rzeczy, o których warto pamiętać:
 
 - re-renderowanie się konsumera pomija wszelkie `shouldComponentUpdate` lub `React.memo` komponentu, w którym jest użyty (co pozwala wyeliminować problemy z blokowaniem aktualizacji jakie występują np. przy połączeniu react-router + react-redux)
-- dane udostępniane przez kompnent Consumer dostępne są tylko w JSX - nie można użyć ich w funkcjach cyklu życia (jest to możliwe z pewnymi ograniczeniami)
+- dane udostępniane przez komponent Consumer dostępne są tylko w JSX - nie można użyć ich w funkcjach cyklu życia (jest to możliwe z pewnymi ograniczeniami)
 
 > Consumer przyjmuje jeden dodatkowy prop - `unstable_observedBits` - więcej na ten temat dowiesz się z rodziału "Context > Zaawansowane opcje".
 
 ### fallbackValue
 
-Może zdarzyć się sytuacja, w której konsumer zostanie użyty bez odpowiadającego mu providera - można sobie to wyobrazić np. w testach jednostkowych czy sytuacji, w której struktura tworzona jest na tyle dynamicznie, że nie zawsze mamy nad nią kontrolę. W tej sytuacji jako wartość, którą będzie widział konsument jest wartość przekazana do funkcja `React.createContext`.
+Może zdarzyć się sytuacja, w której konsumer zostanie użyty bez odpowiadającego mu providera - można sobie to wyobrazić np. w testach jednostkowych czy sytuacji, w której struktura tworzona jest na tyle dynamicznie, że nie zawsze mamy nad nią kontrolę. W tej sytuacji jako wartość, którą będzie widział konsument jest wartość przekazana do funkcji `React.createContext`.
 
 Wbrew nazwie jaką można znaleźć w dokumentacji (`defaultValue`) nie jest to wartość domyślna - nie jest ona przekazywana do konsumerów, osadzonych w providerze nie deklarującym propu `value`.
 

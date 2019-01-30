@@ -57,7 +57,7 @@ const ZipCode = () => {
 };
 ```
 
-Jeżeli chcieli byśmy doń dodać logikę, pozwalającą na automatyczne przeniesienie kursora do drugiego pola w momencie, kiedy wprowadzimy pierwsze dwa znaki możemy skorzystać właśnie z `useRef`:
+Jeżeli chcielibyśmy doń dodać logikę, pozwalającą na automatyczne przeniesienie kursora do drugiego pola w momencie, kiedy wprowadzimy pierwsze dwa znaki możemy skorzystać właśnie z `useRef`:
 
 ```jsx
 const ZipCode = () => {

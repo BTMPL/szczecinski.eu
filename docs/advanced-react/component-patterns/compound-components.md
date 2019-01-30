@@ -29,7 +29,7 @@ W powyższym kodzie widzimy dwa komponenty: `<select>` i `<option>`, które peł
 </div>
 ```
 
-Jeżeli chcieli byśmy utworzyć mechanizm zakładek w naszej aplikacji React, zapewne pierwszym pomysłem było by napisanie komponentu ze stanem:
+Jeżeli chcielibyśmy utworzyć mechanizm zakładek w naszej aplikacji React, zapewne pierwszym pomysłem było by napisanie komponentu ze stanem:
 
 ```jsx
 class App extends React.Component {
@@ -150,7 +150,7 @@ W ten sposób wygenerowane zostanie menu z tytułami zakładek. Nie musimy przek
 
 Funkcja renderująca jest nieco prostsza. Jej głównym zadaniem jest wyświetlenie tylko i wyłącznie tej zakładki, którą potrzebujemy pokazać użytkownikowi:
 
-Wywołanie `React.Children.toArray(this.props.children)` zwróci nam tablicę elementów dzieci (jeżeli "w ciemno" spróbowali byśmy odwołać się do `this.props.children[0]` mogło by okazać się, że `Tabs` ma tylko jedno dziecko, a wtedy `this.props.children` nie będzie tablicą!), z której wyświetlimy tylko ten, który aktualnie uznajemy za aktywny.
+Wywołanie `React.Children.toArray(this.props.children)` zwróci nam tablicę elementów dzieci (jeżeli "w ciemno" spróbowalibyśmy odwołać się do `this.props.children[0]` mogło by okazać się, że `Tabs` ma tylko jedno dziecko, a wtedy `this.props.children` nie będzie tablicą!), z której wyświetlimy tylko ten, który aktualnie uznajemy za aktywny.
 
 ## Kompletny przykład
 

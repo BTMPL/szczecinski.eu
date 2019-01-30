@@ -55,7 +55,7 @@ const App = () => {
 };
 ```
 
-Opierając się na naszych dotychczasowych informacjach, utworzyliśmy oddzielny komponent przechowujący nazwę użytkownika i oddzielny, odpowiedzialny za logikę pobierania i wyświetlania danych. Rozwiązanie takie jest niestety mało elastyczne - jeżeli potrzebowali byśmy wyświetlać dane w innej formie lub w innym komponencie konieczne było by kopiowanie tam całego kodu `useEffect` i skojarzonego z nim stanu.
+Opierając się na naszych dotychczasowych informacjach, utworzyliśmy oddzielny komponent przechowujący nazwę użytkownika i oddzielny, odpowiedzialny za logikę pobierania i wyświetlania danych. Rozwiązanie takie jest niestety mało elastyczne - jeżeli potrzebowalibyśmy wyświetlać dane w innej formie lub w innym komponencie konieczne było by kopiowanie tam całego kodu `useEffect` i skojarzonego z nim stanu.
 
 Rozwiązujemy to wprowadzając nowy, własny Hook - `useGithub`:
 

@@ -20,8 +20,8 @@ Motywacją do wprowadzenia tego mechanizmu były:
 - zachęcenie do tworzenia re-używalnej logiki - umożliwiając łatwe tworzenie własnych Hooków zachęcamy do wykorzystywania ich w innych częściach aplikacji, często bez konieczności stosowania wzorców takich jak render props czy high order components
 - czyste funkcje są łatwiejsze do zrozumienia - dotyczy to zarówno programistów (np. poprzez wyeliminowanie konieczności bindowania funkcji updatujących stan) jak i dla kompilatorów i bundlerów
 
-Mechanizm Hooków - w połączeniu z innymi mechanizmami, tj. Context czy Suspense - zastępuje także dużą ilość przypadków, w których dotychczas stosowali byśmy wzorzec HoC lub render props.
+Mechanizm Hooków - w połączeniu z innymi mechanizmami, tj. Context czy Suspense - zastępuje także dużą ilość przypadków, w których dotychczas stosowalibyśmy wzorzec HoC lub render props.
 
 ## Adaptacja
 
-Hookie nie zamierzają zastąpić komponentów klasowych poprzez wyeliminowanie tego API - stanowią one dopełnienie komponentów klasowych i umożliwiają przejście z jednej metody tworzenia komponentów na drugą. Jako iż wiele kodu wciąż używać będzie klas przez długi czas polecam mimo wszystko zapoznać się z oboma mechanizmami.
+Hooki nie zamierzają zastąpić komponentów klasowych poprzez wyeliminowanie tego API - stanowią one dopełnienie komponentów klasowych i umożliwiają przejście z jednej metody tworzenia komponentów na drugą. Jako iż wiele kodu wciąż używać będzie klas przez długi czas polecam mimo wszystko zapoznać się z oboma mechanizmami.

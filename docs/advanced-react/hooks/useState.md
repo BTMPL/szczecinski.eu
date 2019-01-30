@@ -2,7 +2,7 @@
 title: useState
 ---
 
-`useState` jest jednym z podstawowych Hooków, który pozwala na przechowywanie i aktualizowanie stan w komponentach opartych o funkcje. W podstawowym przypadku możemy skorzystać z niego poprzez wywołanie funkcji z początkową wartością:
+`useState` jest jednym z podstawowych Hooków, który pozwala na przechowywanie i aktualizowanie stanu w komponentach opartych o funkcje. W podstawowym przypadku możemy skorzystać z niego poprzez wywołanie funkcji z początkową wartością:
 
 ```js
 const [stateValue, stateUpdate] = useState(1);
@@ -39,7 +39,7 @@ Składnia taka jest nie tylko mniej wygodna do pisania, jest ona także nieznacz
 
 ## Przykład użycia
 
-Aby zademonstrować mechanizm działania `useState` utwórzmy komponent prostego licznika, który po kliknięciu guzika zwiększa swoją wartość o 1. Tworząc komponent oparty o klasy napisali byśmy:
+Aby zademonstrować mechanizm działania `useState` utwórzmy komponent prostego licznika, który po kliknięciu guzika zwiększa swoją wartość o 1. Tworząc komponent oparty o klasynapisalibyśmy:
 
 ```jsx
 class Counter extends React.Component {

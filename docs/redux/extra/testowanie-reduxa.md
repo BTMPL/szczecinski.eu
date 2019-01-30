@@ -137,7 +137,7 @@ class MyApp extends React.Component {
 export default connect(mapStateToProps)(MyApp);
 ```
 
-Jeżeli chcieli byśmy przetestować taki komponent, otrzymamy błąd informujący o tym, że nie udało się znaleźć store Reduxa w kontekście. Musieli byśmy w naszych testach używać `<Provider>` etc. żeby odtworzyć środowisko, w jakim działa komponent. Zamiast tego dobrym zwyczajem jest eksportowanie zarówno komponentu jak i kontenera (połączonego komponentu) z modułu:
+Jeżeli chcielibyśmy przetestować taki komponent, otrzymamy błąd informujący o tym, że nie udało się znaleźć store Reduxa w kontekście. Musielibyśmy w naszych testach używać `<Provider>` etc. żeby odtworzyć środowisko, w jakim działa komponent. Zamiast tego dobrym zwyczajem jest eksportowanie zarówno komponentu jak i kontenera (połączonego komponentu) z modułu:
 
 ```js
 export class MyApp extends React.Component {

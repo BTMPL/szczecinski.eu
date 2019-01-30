@@ -104,7 +104,7 @@ const action = {
 };
 ```
 
-w przypadku korzystania z czystego JS użyli byśmy kodu:
+w przypadku korzystania z czystego JS użylibyśmy kodu:
 
 ```js
 const todoReducer = (state = initialState, action) => {

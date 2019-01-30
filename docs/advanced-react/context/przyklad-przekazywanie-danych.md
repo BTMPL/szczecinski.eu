@@ -13,6 +13,7 @@ const TranslationContext = React.createContext();
 const { Provider, Consumer } = TranslationContext;
 
 export { Provider, Consumer };
+export default TranslationContext;
 ```
 
 Dane dotyczące tłumaczeń możemy zdefiniować w oddzielnym pliku lub w pliku wejściowym. Tworzymy także komponent główny przechowujący informacje nt. aktualnie ustawionego języka:
@@ -82,7 +83,7 @@ Komponent ten jest bardzo prosty (czytaj: nie posiada zaawansowanych funkcjonaln
 
 Spowoduje wyświetlenie wartości odpowiadającej kluczowi "hello", z obiektu przekazanego przez kontekst.
 
-W tym momencie możemy już używać komponentu `T` w komponencie `Home` w celu dodania dynamicznego tłumaczenia. Wszędzie tam, gdzie chcieli byśmy umożliwić zmianę języka, możemy skorzystać z udostępnionej metody:
+W tym momencie możemy już używać komponentu `T` w komponencie `Home` w celu dodania dynamicznego tłumaczenia. Wszędzie tam, gdzie chcielibyśmy umożliwić zmianę języka, możemy skorzystać z udostępnionej metody:
 
 ```jsx
 <Consumer>
