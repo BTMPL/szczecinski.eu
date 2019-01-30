@@ -108,11 +108,13 @@ class Tabs extends React.Component {
       return (
         <li
           key={key}
-          style={{fontWeight: key === this.state.activeTab ? 'bold' : undefined}
+          style={{
+            fontWeight: key === this.state.activeTab ? "bold" : undefined
+          }}
           onClick={() => this.setState({ activeTab: key })}
         >
           {item.props.title}
-        </TabItem>
+        </li>
       );
     });
   }
@@ -120,9 +122,7 @@ class Tabs extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.renderMenu()}
-        </ul>
+        <ul>{this.renderMenu()}</ul>
         <div>
           {React.Children.toArray(this.props.children)[this.state.activeTab]}
         </div>

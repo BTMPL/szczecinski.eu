@@ -12,7 +12,7 @@ const kwadrat = a => a * a;
 
 // definicja logera w postaci HoC
 const withLog = func => {
-  if (process.env.NOVE_ENV === "development") {
+  if (process.env.NODE_ENV === "development") {
     return (...args) => {
       console.log("Funkcja wywołana z argumentami: ", args);
       const result = func(...args);

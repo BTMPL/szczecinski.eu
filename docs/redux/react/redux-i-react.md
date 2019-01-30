@@ -8,34 +8,37 @@ Podstawowa wersja implementacji Redux w React jest stosunkowo prosta - każdy ko
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers } from "redux";
 
 const reducer = (state = 0, action) => {
-  if (action.type === 'CLICK') return state + 1;
+  if (action.type === "CLICK") return state + 1;
   return state;
-}
+};
 
-const store = createStore(combineReducers({
-  counter: reducer
-}));
+const store = createStore(
+  combineReducers({
+    counter: reducer
+  })
+);
 
 class App extends React.Component {
-
   state = { count: 0 };
 
   handleClick = () => {
-    store.dispatch({ type: 'CLICK' });
+    store.dispatch({ type: "CLICK" });
     this.setState({
       count: store.getState().counter
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Kliknięto {this.state.count} razy</button>
+        <button onClick={this.handleClick}>
+          Kliknięto {this.state.count} razy
+        </button>
       </div>
-    )
+    );
   }
 }
 ```
@@ -99,7 +102,7 @@ Technicznie powinniśmy jeszcze wywołać `store.getState()` ręcznie w konstruk
   }
 ```
 
-Pozostajemy jednak z jeszcze dwa problemy - problemy ideologicznym. 
+Pozostajemy jednak z jeszcze dwoma problemami - problemy ideologicznym.
 
 - dane do naszego komponentu nie wpływają już jako props, a "pojawiają się" nagle, co zaprzecza jednej z podstawowych reguł React,
 - każdy komponent, który potrzebuje komunikować się z Reduxem musi mieć dostęp do obiektu `store`, sposób, w jaki zaimplementowaliśmy to powyżej "spaja" naszą aplikację z Reduxem - nasze komponenty nie mogą być już łatwo używane w innych projektach i środowiskach (np. w testach)
