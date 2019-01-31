@@ -101,6 +101,7 @@
       "advanced-react/hooks/useContext",
       "advanced-react/hooks/pozostale",
       "advanced-react/hooks/wlasne-hooki"
-    ]
+    ],
+    "Pozostałe API": ["advanced-react/api/memo", "advanced-react/api/lazy"]
   }
 }
