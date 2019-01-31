@@ -144,7 +144,7 @@ Dodatkowo, jeżeli indeks mapy pokrywa się ze stanem komponentu, jest on wizual
 
 W ten sposób wygenerowane zostanie menu z tytułami zakładek. Nie musimy przekazywać tych danych do `Tabs` - komponent ten zakłada, że każdy z elementów-dzieci posiada te informację, więc odczytuje je z elementów.
 
-> Mogło by wydawać się, że w ten sposób łamiemy zasadę przekazywania danych w górę (pamiętamy, że w tym celu używa się callbacków), jednak jest to "nadużycie" faktu, że elementy dzieci, są także props elementu rodzica.
+> Mogło by wydawać się, że w ten sposób łamiemy zasadę przekazywania danych w górę (pamiętamy, że w tym celu używa się callbacków), jednak jest to "nadużycie" faktu, że elementy dzieci są także propsami elementu rodzica.
 
 ### `render`
 
