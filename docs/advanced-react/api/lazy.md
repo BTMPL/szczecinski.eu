@@ -51,7 +51,7 @@ function App() {
   return (
     <div>
       <p>
-        Możesz wpisywać tutaj dowolny tkest, UI nie jest blokowane na czas
+        Możesz wpisywać tutaj dowolny tekst, UI nie jest blokowane na czas
         "pobierania" komponentu:
       </p>
       <input value={name} onChange={e => setName(e.target.value)} />
