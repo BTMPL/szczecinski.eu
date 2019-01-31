@@ -84,7 +84,7 @@ class Tabs extends React.Component {
 }
 ```
 
-W tym momencie jednak żaden komponent (ani `Tabs` ani nasz komponent) nie wie, która zakładka powinna być widoczna. `Tabs` nie jest w stanie zadecydować, który element ma być widoczny, ponieważ otrzymuje on tylko jeden (i nie jest w stanie go zmodyfikować), a nasza aplikacja nie powinna decydować jak zadbać o to, w jaki sposób śledzić zmiany widoczności - nie po to "abstrachujemy" logikę.
+W tym momencie jednak żaden komponent (ani `Tabs` ani nasz komponent) nie wie, która zakładka powinna być widoczna. `Tabs` nie jest w stanie zadecydować, który element ma być widoczny, ponieważ otrzymuje on tylko jeden (i nie jest w stanie go zmodyfikować). Nasza aplikacja natomiast nie powinna decydować w jaki sposób śledzić zmiany widoczności - nie po to "abstrachujemy" logikę.
 
 Komponent `Tabs` wywołuje `props.children` jako funkcję - może on zatem przekazać do niej jakieś argumenty. Nasz komponent potrzebuje co najmniej 2 informacje: która zakładka jest aktualnie widoczna oraz jak zmienić widoczną zakładkę:
 
@@ -173,7 +173,7 @@ Jednak - odwrotnie jak to się ma w przypadku Spidermana - "z tą odpowiedzialno
 
 ## Problemy
 
-Jeżeli przyjrzeć się powyższemu zastosowania wzorca render prop można dostrzec pewien problem: w celu manipulowania zakładek (np. zmiany aktywnej) zmiana musi pochodzić z wewnątrz funkcji osadzonej w komponencie `<Tabs>` bo tylko tam dostępna jest funkcja `tabProps.setActive`. Co prawda można spróbować przypisać `this.setActive = tabProps.setActive` ale nie jest to "deklaratywne" zastosowanie, które implementujemy w React.
+Jeżeli przyjrzeć się powyższemu zastosowaniu wzorca render prop można dostrzec pewien problem: w celu manipulowania zakładek (np. zmiany aktywnej) zmiana musi pochodzić z wewnątrz funkcji osadzonej w komponencie `<Tabs>` bo tylko tam dostępna jest funkcja `tabProps.setActive`. Co prawda można spróbować przypisać `this.setActive = tabProps.setActive` ale nie jest to "deklaratywne" zastosowanie, które implementujemy w React.
 
 Jeżeli nasza aplikacja przyjmie formę:
 
