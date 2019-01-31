@@ -84,7 +84,7 @@ class Tabs extends React.Component {
 }
 ```
 
-W tym momencie jednak żaden komponent (ani `Tabs` ani nasz komponent) nie wie, która zakładka powinna być widoczna. `Tabs` nie jest w stanie zadecydować, który element ma być widoczny, ponieważ otrzymuje on tylko jeden (i nie jest w stanie go zmodyfikować). Nasza aplikacja natomiast nie powinna decydować w jaki sposób śledzić zmiany widoczności - nie po to "abstrachujemy" logikę.
+W tym momencie jednak żaden komponent (ani `Tabs` ani nasz komponent) nie wie, która zakładka powinna być widoczna. `Tabs` nie jest w stanie zadecydować, który element ma być widoczny, ponieważ otrzymuje on tylko jeden (i nie jest w stanie go zmodyfikować). Nasza aplikacja natomiast nie powinna decydować w jaki sposób śledzić zmiany widoczności - nie po to "abstrahujemy" logikę.
 
 Komponent `Tabs` wywołuje `props.children` jako funkcję - może on zatem przekazać do niej jakieś argumenty. Nasz komponent potrzebuje co najmniej 2 informacje: która zakładka jest aktualnie widoczna oraz jak zmienić widoczną zakładkę:
 
