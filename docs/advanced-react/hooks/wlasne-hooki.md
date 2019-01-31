@@ -33,7 +33,7 @@ const App = () => {
   useEffect(
     () => {
       if (!userName) return;
-      fetch("https://api.github.com/users/btmpl/repos")
+      fetch(`https://api.github.com/users/${userName}/repos`)
         .then(response => response.json())
         .then(repositories => {
           setRepositories(repositories);
@@ -67,7 +67,7 @@ const useGithub = () => {
   useEffect(
     () => {
       if (!userName) return;
-      fetch("https://api.github.com/users/btmpl/repos")
+      fetch(`https://api.github.com/users/${userName}/repos`)
         .then(response => response.json())
         .then(repositories => {
           setRepositories(repositories);

@@ -39,7 +39,7 @@ Składnia taka jest nie tylko mniej wygodna do pisania, jest ona także nieznacz
 
 ## Przykład użycia
 
-Aby zademonstrować mechanizm działania `useState` utwórzmy komponent prostego licznika, który po kliknięciu guzika zwiększa swoją wartość o 1. Tworząc komponent oparty o klasynapisalibyśmy:
+Aby zademonstrować mechanizm działania `useState` utwórzmy komponent prostego licznika, który po kliknięciu guzika zwiększa swoją wartość o 1. Tworząc komponent oparty o klasy napisalibyśmy:
 
 ```jsx
 class Counter extends React.Component {
@@ -147,7 +147,7 @@ const User = () => {
 };
 ```
 
-Powodowało by to kilka problemów:
+powodowałoby to kilka problemów:
 
 - po pierwsze, z uwagi na block-level scope, `lastName` i `setLastName` dostępne są tylko w swoim bloku, więc nie możemy użyć ich w JSX,
 - jeżeli obejdziemy to używając np. `var`, wprowadzimy wartość w pole z emailem i następnie w pole z imieniem, okaże się, że wartość email została przeniesiona do pola na nazwisko

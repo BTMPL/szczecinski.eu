@@ -2,7 +2,7 @@
 title: Kod asynchroniczny - Promise
 ---
 
-Duża część pracy z JS zwiazana jest ze operacjami, które nie dzieją się od razu - odpytywanie zewnętrznych serwerów, oczekiwanie na skomplikowane obliczenia czy wykonanie się innego kawałku kodu. Jako, że JS jest jedno wątkowy, wykonywanie tego typu operacji na głównym wątku powodowało by zablokowanie go - w rezultacie blokowało by także interakcję z UI etc.
+Duża część pracy z JS zwiazana jest ze operacjami, które nie dzieją się od razu - odpytywanie zewnętrznych serwerów, oczekiwanie na skomplikowane obliczenia czy wykonanie się innego kawałku kodu. Jako, że JS jest jedno wątkowy, wykonywanie tego typu operacji na głównym wątku powodowałoby zablokowanie go - w rezultacie blokowało by także interakcję z UI etc.
 
 Dotychczasowo problem ten rozwiąznywany był przy użyciu callbacków - funkcje były wywoływane z inną funkcją, która była następnie wywoływana kiedy główne zadanie zostało wykonane. Kod taki stawał się nieczytelny i bardzo szybko można było przestać orientować się w jaki sposób przebiega egzekucja aplikacji.
 
