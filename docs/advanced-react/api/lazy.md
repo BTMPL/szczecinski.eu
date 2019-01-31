@@ -4,7 +4,7 @@ title: React.lazy
 
 Domyślnie wszystkie nasze komponenty będą znajdowały się w pliku `.js` wygenerowanym przez nasz bundler czasie tworzenia aplikacji. Rozwiązanie takie przyczynia się do wzrostu wielkości pliku i pogorszenia "user experience" naszych odbiorców - muszą pobierać dane, których nie potrzebują jeszcze teraz lub w ogóle.
 
-Rozwiązaniem problemu jest tzw. "lazy loading", w którym nowe komponent (i inne dane) przesyłane są do przeglądarki dopiero w momencie, w którym są potrzebne. React udostępnia proste API pozwalająca na implementację takiego rozwiązania i oparte o rozszerzenie mechanizmu `import` powodujące, że zwraca on Promise.
+Rozwiązaniem problemu jest tzw. "lazy loading", w którym nowe komponenty (i inne dane) przesyłane są do przeglądarki dopiero w momencie, w którym są potrzebne. React udostępnia proste API pozwalająca na implementację takiego rozwiązania i oparte o rozszerzenie mechanizmu `import` powodujące, że zwraca on Promise.
 
 API `React.lazy` przyjmuje jeden parametr - funkcję, która wywołana zwróci import komponentu:
 
@@ -17,7 +17,9 @@ const App = () => {
   // O React.Suspense dowiesz się za chwilkę :)
   return (
     <React.Suspense fallback={<div>Wczytuje dane ...</div>}>
-      {!showData && <button onClick={() => toggleShow()}>Pokaż dane</button>}
+      {!showData && (
+        <button onClick={() => toggleShow(true)}>Pokaż dane</button>
+      )}
       {showData && <BigComponent />}
     </React.Suspense>
   );
@@ -40,7 +42,7 @@ const BigComponent = React.lazy(() => {
   return new Promise(res => {
     setTimeout(() => {
       res({
-        default: () => <div>done</div>
+        default: () => <div>Gotowe!</div>
       });
     }, 5000);
   });

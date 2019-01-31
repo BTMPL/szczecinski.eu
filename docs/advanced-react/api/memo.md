@@ -9,7 +9,7 @@ Komponenty Reactowe renderują się zawsze, kiedy:
 - komponent klasowy wywołuje `this.forceUpdate()`,
 - zmianie ulega context, który subskrybują (`useContext`, `contextType`)
 
-Zwykle nie jest to problem, ale czasem chcemy, by komponenty nie re-renderowały się ponownie, jeżeli nie jest to wymagane (np. ich re-renderowania powoduje jakieś skomplikowane obliczenia albo efekty w layoucie tj. layout trashing, co powoduje pogorszenie wydajności aplikacji).
+Zwykle nie jest to problem, ale czasem chcemy, by komponenty nie re-renderowały się ponownie, jeżeli nie jest to wymagane (np. ich re-renderowanie powoduje jakieś skomplikowane obliczenia albo efekty w layoucie tj. layout trashing, co powoduje pogorszenie wydajności aplikacji).
 
 W komponentach klasowych możemy wykorzystać do tego metodę `shouldComponentUpdate`. W komponentach opartych o funkcje - na ten moment - nie istnieje możliwość by decyzja ta zapadła wewnętrznie (wytłumaczenie dlaczego nie jest to takie proste znajdziesz na [blogu Dana](https://overreacted.io/why-isnt-x-a-hook/#not-a-hook-usebailout)). Decyzję o tym, w jakich przypadkach komponent powinien się re-renderwować musimy podjąć w momencie jego deklaracji.
 
