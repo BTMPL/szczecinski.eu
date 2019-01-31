@@ -50,7 +50,7 @@ const ZipCode = () => {
         type="text"
         maxLength="3"
         ref={zip2Ref}
-        onChange={e => setZip1(e.target.value)}
+        onChange={e => setZip2(e.target.value)}
       />
     </React.Fragment>
   );
@@ -79,7 +79,7 @@ const ZipCode = () => {
         type="text"
         maxLength="3"
         ref={zip2Ref}
-        onChange={e => setZip1(e.target.value)}
+        onChange={e => setZip2(e.target.value)}
       />
     </React.Fragment>
   );
