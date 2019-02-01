@@ -2,12 +2,12 @@
 title: connect
 ---
 
-`connect` to tzw. High Order Component. Stanowi on drugą część mechanizmu Context - jest to consumer, który komunikuje się z "najbliższym" providerem, który znajdzie podczas przechodzenia "w górę" drzewa JSX. Odbiera on dane (obiekt store) z contextu React i udostępnia komponentowi który wzbogaca.
+`connect` to tzw. High Order Component. Stanowi on drugą część mechanizmu Context - jest to konsument, który komunikuje się z "najbliższym" Providerem, który znajdzie podczas przechodzenia "w górę" drzewa JSX. Odbiera on dane (obiekt store) z kontekstu React i udostępnia komponentowi który wzbogaca.
 
 ```js
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-const App = (props) => (
+const App = props => (
   <div>
     <button onClick={() => {}}>Kliknięto 0 razy</button>
   </div>
@@ -16,16 +16,20 @@ const App = (props) => (
 const ConnectedApp = connect()(App);
 ```
 
-Jeżeli w naszej aplikacji wykorzystamy teraz `<ConnectedComponent />` zobaczymy, że wyrenderuje się on poprawnie. Jeżeli podejrzymy jakie props otrzymał (np. używając React Developer Tools lub chociażby dodając `console.log(props)` do komponentu) zobaczymy nowy prop - `dispatch`. 
+Jeżeli w naszej aplikacji wykorzystamy teraz `<ConnectedComponent />` zobaczymy, że wyrenderuje się on poprawnie. Jeżeli podejrzymy jakie props otrzymał (np. używając React Developer Tools lub chociażby dodając `console.log(props)` do komponentu) zobaczymy nowy prop - `dispatch`.
 
 W ten sposób nasz komponent został "spięty" z Reduxem i może teraz emitować zdarzenia:
 
 ```js
-const App = (props) => (
+const App = props => (
   <div>
-    <button onClick={() => {
-      props.dispatch({ type: 'CLICK' });
-    }}>Kliknięto 0 razy</button>
+    <button
+      onClick={() => {
+        props.dispatch({ type: "CLICK" });
+      }}
+    >
+      Kliknięto 0 razy
+    </button>
   </div>
 );
 ```

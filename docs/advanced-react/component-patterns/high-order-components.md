@@ -30,7 +30,7 @@ console.log(kwadratWithLog(9));
 
 Poprzez wywołanie `withLog(kwadrat)` tworzymy nową funkcje. Zwrócona funkcja pobiera dowolną ilość argumentów (`...args`) a wywołana wywołuje oryginalną funkcje. Dodatkowo, w zależności od tego w jakim środowisku działamy zobaczymy także informacje o tym, z jakimi argumentami wywołana została oryginalna funkcja oraz co zwróciła.
 
-Te samą logikę można przełożyć także na komponenty Reactowe.
+Te samą logikę można przełożyć także na komponenty Reaktowe.
 
 ## Przykład
 

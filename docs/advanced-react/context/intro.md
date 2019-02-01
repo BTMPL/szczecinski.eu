@@ -47,7 +47,7 @@ Kontekst składa się z 2 elementów:
 - Provider - którego zadaniem jest udostępnianie danych wszystkim elementom znajdującym się w jego pod-drzewie,
 - Consumer - który świadomy jest zmian w Providerze i pobiera z niego dane, przekazując je do właściwego komponentu.
 
-API Consumera korzysta ze wzorca Render Props.
+Consumer korzysta ze wzorca Render Props.
 
 ## React.createContext
 
@@ -58,7 +58,7 @@ const MyContext = React.createContext(fallbackValue);
 // uzyskujemy dostęp do MyContext.Provider, MyContext.Consumer
 ```
 
-> O tym czym jest `fallbackValue` dowiesz się w części poświęconej konsumerowi
+> O tym czym jest `fallbackValue` dowiesz się w części poświęconej Consumer
 
 Ponieważ w zdecydowanej większości przypadków, Provider i Consumer będą używane przez komponenty znajdujące się w innych plikach, kontekst zwykle tworzony jest przez oddzielne moduły, np:
 
@@ -138,16 +138,16 @@ Za każdym razem, kiedy zmieni się wartość `value` przekazana do providera, k
 
 Wynika z tego kilka rzeczy, o których warto pamiętać:
 
-- re-renderowanie się konsumera pomija wszelkie `shouldComponentUpdate` lub `React.memo` komponentu, w którym jest użyty (co pozwala wyeliminować problemy z blokowaniem aktualizacji jakie występują np. przy połączeniu react-router + react-redux)
+- re-renderowanie się konsumenta pomija wszelkie `shouldComponentUpdate` lub `React.memo` komponentu, w którym jest użyty (co pozwala wyeliminować problemy z blokowaniem aktualizacji jakie występują np. przy połączeniu react-router + react-redux)
 - dane udostępniane przez komponent Consumer dostępne są tylko w JSX - nie można użyć ich w funkcjach cyklu życia (jest to możliwe z pewnymi ograniczeniami)
 
 > Consumer przyjmuje jeden dodatkowy prop - `unstable_observedBits` - więcej na ten temat dowiesz się z rozdziału "Context > Zaawansowane opcje".
 
 ### fallbackValue
 
-Może zdarzyć się sytuacja, w której konsumer zostanie użyty bez odpowiadającego mu providera - można sobie to wyobrazić np. w testach jednostkowych czy sytuacji, w której struktura tworzona jest na tyle dynamicznie, że nie zawsze mamy nad nią kontrolę. W tej sytuacji jako wartość, którą będzie widział konsument jest wartość przekazana do funkcji `React.createContext`.
+Może zdarzyć się sytuacja, w której konsument zostanie użyty bez odpowiadającego mu providera - można sobie to wyobrazić np. w testach jednostkowych czy sytuacji, w której struktura tworzona jest na tyle dynamicznie, że nie zawsze mamy nad nią kontrolę. W tej sytuacji jako wartość, którą będzie widział konsument jest wartość przekazana do funkcji `React.createContext`.
 
-Wbrew nazwie jaką można znaleźć w dokumentacji (`defaultValue`) nie jest to wartość domyślna - nie jest ona przekazywana do konsumerów, osadzonych w providerze nie deklarującym propu `value`.
+Wbrew nazwie jaką można znaleźć w dokumentacji (`defaultValue`) nie jest to wartość domyślna - nie jest ona przekazywana do Consumer-ów, osadzonych w providerze nie deklarującym propu `value`.
 
 ## contextType
 
@@ -159,7 +159,7 @@ Nowe API wprowadza możliwość pobrania **jednego** kontekstu w ten sposób:
 
 ```jsx
 
-import Context from './MyContext'; // uwaga! importujemy cały kontekst, nie tylko konsumera!
+import Context from './MyContext'; // uwaga! importujemy cały kontekst, nie tylko Consumer!
 const Child extends React.Component {
   static contextType = Context;
 
