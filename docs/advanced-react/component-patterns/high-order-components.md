@@ -4,7 +4,7 @@ title: HoC - Komponenty wyższego rzędu
 
 Komponenty Wyższego Rzędu to wzorzec używany głównie w przypadku, kiedy chcemy przygotować mechanizm logiki (w tym stanu), który może być wykorzystywany z dowolnym komponentem poprzez "wzbogacanie" go. Termin ten wywodzi się z programowania funkcyjnego, w którym występuje określenie "funkcja wyższego poziomu".
 
-Funkcje takie to funkcje, które zwracają inne funkcje - albo poprzez utworzenie zdefiniowanej funkcji albo poprzez zmodyfikowanie innej, przekazanej jako argument. Przykładem może być funkcja, która dodaje logowanie danych o wywołaniu innych funkcji - możemy np. zastosować ją jako "makro" i obsługiwać inaczej w zależności od tego, czy działamy w trybie developera czy produkcyjnym:
+Funkcje wyższego rzędu to funkcje, które zwracają inne funkcje - albo poprzez utworzenie zdefiniowanej funkcji albo poprzez zmodyfikowanie innej, przekazanej jako argument. Przykładem może być funkcja, która dodaje logowanie danych o wywołaniu innych funkcji - możemy np. zastosować ją jako "makro" i obsługiwać inaczej w zależności od tego, czy działamy w trybie developera czy produkcyjnym:
 
 ```js
 // definicja funkcji biznesowej
