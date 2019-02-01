@@ -191,6 +191,34 @@ nasz komponent może po prostu nie wyświetlić ostatniego elementu, a w skrajny
 >
 > Musisz zdefiniować nazwę komponentu używając `Component.displayName` - w innym przypadku w momencie minifikacji kodu zostanie ona zastąpiona zminifikowaną nazwą i nasze sprawdzanie zawsze zwróci fałsz!
 
+Możemy co prawda użyć zapisu:
+
+```jsx
+    return React.Children.map(this.props.children, (item, key) => {
+      if (item.type !== Tab) {
+        throw new Error('Przekazany komponent nie jest komponentem <Tab>!');
+      }
+      return (
+        <li...
+```
+
+Ale ma on dwa minusy:
+
+- po pierwsze `Tabs` musi importować `Tab`, bo nie zawsze będzie możliwe / pożądane,
+- `Tabs` przestanie akceptować pochodne komponentu `Tab`, np:
+
+```jsx
+const MyTab = styled(Tab)`
+  color: red;
+`;
+```
+
+Sytuację te poprawimy stosując pierwszy zapis i dodając:
+
+```js
+MyTab.displayName = "Tab";
+```
+
 ## Kiedy użyć tego wzorca
 
 Wzorzec ten nadaje się głównie w przypadkach, kiedy tworzymy komponenty "mało elastyczne", skupiając się głównie na logice a nie wyglądzie komponentu czy możliwości jego modyfikacji (rozszerzenia) przez użytkownika.
