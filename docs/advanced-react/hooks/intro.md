@@ -17,10 +17,10 @@ Dostępne są one **wyłącznie** w komponentach opartych o funkcje i nie ma mo�
 Motywacją do wprowadzenia tego mechanizmu były:
 
 - zachęcenie do tworzenia mniej złożonych komponentów - trzymanie dużej ilości danych w stanie komponentu nie tylko komplikuje jego mechanikę ale sprawia też, że staje się on trudniejszy do wykorzystywania w innych celach
-- zachęcenie do tworzenia re-używalnej logiki - umożliwiając łatwe tworzenie własnych Hooków zachęcamy do wykorzystywania ich w innych częściach aplikacji, często bez konieczności stosowania wzorców takich jak render props czy high order components
-- czyste funkcje są łatwiejsze do zrozumienia - dotyczy to zarówno programistów (np. poprzez wyeliminowanie konieczności bindowania funkcji updatujących stan) jak i dla kompilatorów i bundlerów
+- zachęcenie do tworzenia re-używalnej logiki - umożliwiając łatwe tworzenie własnych Hooków zachęcamy do wykorzystywania ich w innych częściach aplikacji, często bez konieczności stosowania wzorców takich jak Render Props czy High order Components
+- czyste funkcje są łatwiejsze do zrozumienia - dotyczy to zarówno programistów (np. poprzez wyeliminowanie konieczności bindowania funkcji aktualizujących stan) jak i dla kompilatorów i bundlerów
 
-Mechanizm Hooków - w połączeniu z innymi mechanizmami, tj. Context czy Suspense - zastępuje także dużą ilość przypadków, w których dotychczas stosowalibyśmy wzorzec HoC lub render props.
+Mechanizm Hooków - w połączeniu z innymi mechanizmami, tj. Context czy Suspense - zastępuje także dużą ilość przypadków, w których dotychczas stosowalibyśmy wzorzec HoC lub Render Props.
 
 ## Adaptacja
 

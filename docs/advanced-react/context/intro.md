@@ -47,7 +47,7 @@ Kontekst składa się z 2 elementów:
 - Provider - którego zadaniem jest udostępnianie danych wszystkim elementom znajdującym się w jego pod-drzewie,
 - Consumer - który świadomy jest zmian w Providerze i pobiera z niego dane, przekazując je do właściwego komponentu.
 
-API Consumera korzysta ze wzorca render props.
+API Consumera korzysta ze wzorca Render Props.
 
 ## React.createContext
 
@@ -141,7 +141,7 @@ Wynika z tego kilka rzeczy, o których warto pamiętać:
 - re-renderowanie się konsumera pomija wszelkie `shouldComponentUpdate` lub `React.memo` komponentu, w którym jest użyty (co pozwala wyeliminować problemy z blokowaniem aktualizacji jakie występują np. przy połączeniu react-router + react-redux)
 - dane udostępniane przez komponent Consumer dostępne są tylko w JSX - nie można użyć ich w funkcjach cyklu życia (jest to możliwe z pewnymi ograniczeniami)
 
-> Consumer przyjmuje jeden dodatkowy prop - `unstable_observedBits` - więcej na ten temat dowiesz się z rodziału "Context > Zaawansowane opcje".
+> Consumer przyjmuje jeden dodatkowy prop - `unstable_observedBits` - więcej na ten temat dowiesz się z rozdziału "Context > Zaawansowane opcje".
 
 ### fallbackValue
 
@@ -159,7 +159,7 @@ Nowe API wprowadza możliwość pobrania **jednego** kontekstu w ten sposób:
 
 ```jsx
 
-import Context from './MyContext'; // uwaga! importujemy cały konteks, nie tylko konsumera!
+import Context from './MyContext'; // uwaga! importujemy cały kontekst, nie tylko konsumera!
 const Child extends React.Component {
   static contextType = Context;
 

@@ -2,7 +2,7 @@
 title: useContext
 ---
 
-`useEffect` jest prostym, ale potężnym i przydatnym mechanizmem - pozwala on komponentom opartym o funkcje na dostęp do kontekstu, bez konieczności implementacji wzorca render props i owijania komponentów w Consumery. Dodatkowo, w odróżnieniu od `contextType` komponent może korzystać z wielu kontekstów.
+`useEffect` jest prostym, ale potężnym i przydatnym mechanizmem - pozwala on komponentom opartym o funkcje na dostęp do kontekstu, bez konieczności implementacji wzorca Render Props i owijania komponentów w Consumery. Dodatkowo, w odróżnieniu od `contextType` komponent może korzystać z wielu kontekstów.
 
 Hook ten musimy zainicjować z kontekstem - nie z Providerem czy Consumerem, ale całym obiektem, uzyskanym z `React.createContext`.
 
