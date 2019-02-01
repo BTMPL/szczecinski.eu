@@ -76,7 +76,7 @@ const Context = React.createContext(
   (prev, next) => {
     let result = 0b00;
     if (prev.value1 !== next.value1) result |= CONTEXT_OBSERVABLE_MAP.value1;
-    if (prev.value1 !== next.value2) result |= CONTEXT_OBSERVABLE_MAP.value2;
+    if (prev.value2 !== next.value2) result |= CONTEXT_OBSERVABLE_MAP.value2;
 
     return result;
   }
