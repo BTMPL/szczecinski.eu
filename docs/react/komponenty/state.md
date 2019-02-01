@@ -70,7 +70,7 @@ Zamiast tego posłużymy się metodą, którą przygotowali dla nas twórcy Reac
 
 Zmieńmy zatem nieco nasz komponent (i tymczasowo dodajmy podgląd, aby widzieć zachodzącą w stanie zmianę).
 
-Do naszego handlera `handleChange` dodajemy wywołanie `this.setState`, które jako parametr otrzymuje obiekt ze zmienionymi wartościami. Jeżeli nasz komponent poza tekstem przechowywał by też inne dane w swoim stanie, a my chcieli byśmy zmienić jedynie tekst, nie musimy przekazywać ponownie całego stanu (nie zmienionych elementów) a jedynie obiekt zawierający pole `text`.
+Do naszego handlera `handleChange` dodajemy wywołanie `this.setState`, które jako parametr otrzymuje obiekt ze zmienionymi wartościami. Jeżeli nasz komponent poza tekstem przechowywał by też inne dane w swoim stanie, a my chcielibyśmy zmienić jedynie tekst, nie musimy przekazywać ponownie całego stanu (nie zmienionych elementów) a jedynie obiekt zawierający pole `text`.
 
 Po wpisaniu treści pojawi się dodatkowy paragraf zawierający podgląd wpisywanego Tweetu. Po sprawdzeniu, że rzeczywiście się tak dzieje możemy go usunąć.
 
@@ -98,7 +98,7 @@ Po wpisaniu treści pojawi się dodatkowy paragraf zawierający podgląd wpisywa
 
 Funkcja `setState` posiada też drugą formę, w której jako pierwszy parametr możemy przekazać funkcję, która w momencie aktualizacji stanu zostanie wywołana z jego aktualną wartością. Przydaje się to głównie w przypadku modyfikowania stanu w oparciu o jego aktualną wartość (np. zwiększenie o 1, lub dodanie do tablicy).
 
-W przypadku, kiedy użyli byśmy poprzedniej notacji, dane mogły by być nieprawidłowe w wyniku optymalizacji (batching akcji) React:
+W przypadku, kiedy użylibyśmy poprzedniej notacji, dane mogły by być nieprawidłowe w wyniku optymalizacji (batching akcji) React:
 
 ```jsx
 this.setState({ value: this.state.value + 1});
