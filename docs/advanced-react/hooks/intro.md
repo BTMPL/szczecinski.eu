@@ -10,7 +10,7 @@ Dostępne są one **wyłącznie** w komponentach opartych o funkcje i nie ma mo�
 
 > #### Uwaga
 >
-> Hooki dostępne będą w React dopiero od wersji 16.8.0. Jeżeli chcesz skorzystać z nich wcześniej musisz do swojego projektu dodać alphy pakietu react i react-dom: `npm install react@next react-dom@next`
+> Hooki dostępne będą w React dopiero od wersji 16.8.0. Jeżeli chcesz skorzystać z nich przed oficjalną premierą musisz do swojego projektu dodać alphy pakietu react i react-dom: `npm install react@next react-dom@next`
 
 ## Motywacja
 
