@@ -204,7 +204,7 @@ Możemy co prawda użyć zapisu:
 
 Ale ma on dwa minusy:
 
-- po pierwsze `Tabs` musi importować `Tab`, bo nie zawsze będzie możliwe / pożądane,
+- po pierwsze `Tabs` musi importować `Tab`, co nie zawsze będzie możliwe / pożądane,
 - `Tabs` przestanie akceptować pochodne komponentu `Tab`, np:
 
 ```jsx
